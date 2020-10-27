@@ -4,10 +4,10 @@ import {View, Text, Button} from 'react-native';
 const MyButton = () => {
     //no <div> 
     return <View>
-        <Text>Button to signup</Text>
+        <Text>Just a sample button</Text>
         <Button 
-        title="Sign up"
-        color="#FABBAD"
+        title="Random Button"
+        color="gray"
         onPress={()=>{alert("Hi!");}}
         />
         </View>
