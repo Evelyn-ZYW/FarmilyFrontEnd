@@ -38,7 +38,12 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         marginRight: 5,
     },
-    brcorner: {
+    brcorner1: {
+        maxWidth: "50%",
+        flexDirection: "row",
+    },
+    brcorner2: {
+        minWidth: "35%",
         flexDirection: "row",
         justifyContent: "flex-end",
     }
@@ -52,8 +57,8 @@ const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
     const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
 
     return <View style={[styles.container, styles.cont, bcolor]}
-        onTouchStart={()=>{setBdColor("#FDB833");}}
-        onTouchEnd={()=>{setBdColor("#E5E5E5");}}
+        onTouchStart={() => { setBdColor("#FDB833"); }}
+        onTouchEnd={() => { setBdColor("#E5E5E5"); }}
     >
         <View style={styles.row}>
             <View style={styles.texts}>
@@ -70,7 +75,7 @@ const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
         </View>
 
         <View style={styles.actions}>
-            <View style={styles.row}>
+            <View style={styles.brcorner1}>
                 <Image
                     style={styles.icon}
                     source={require('../../public/heart.png')}
@@ -86,7 +91,7 @@ const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
                     style={styles.smtxt}
                 >{txt4}</Text>
             </View>
-            <View style={styles.brcorner}>
+            <View style={styles.brcorner2}>
                 <Image
                     style={styles.icon}
                     source={require('../../public/share.png')}
