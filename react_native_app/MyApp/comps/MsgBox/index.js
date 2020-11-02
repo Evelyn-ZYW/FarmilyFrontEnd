@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import style from '../../storybook/stories/CenterView/style';
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection:"row",
+        flexDirection: "row",
         borderWidth: 1,
         borderColor: "#DADADA",
         borderRadius: 8,
@@ -22,13 +22,15 @@ const styles = StyleSheet.create({
     }
 })
 
-const MsgBox = ({ txt1, txt2 }) => {
+const MsgBox = ({ txt1, txt2, imagePath }) => {
+
+
 
     return <View style={styles.container}>
         <View>
             <Image
                 style={styles.avatar}
-                source={require('../../public/a1.png')}
+                source={imagePath ? imagePath : require('../../public/a1.png')}
             />
         </View>
         <View>
