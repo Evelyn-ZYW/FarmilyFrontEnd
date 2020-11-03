@@ -8,22 +8,26 @@
 
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Button from './comps/Button';
 
-const App = () => {
-  return <View style={styles.container}>
-    <Button />
-  </View>
-
-}
+import ForumBoard from './pages/ForumBoard';
 
 const styles = StyleSheet.create({
   container: {
      flex:1,
-     backgroundColor:"red",
+    //  backgroundColor:"red",
      justifyContent:"center",
      alignItems:"center"
   }
 })
-//export default App;
-export {default} from './storybook'; 
+
+
+const App = () => {
+  return <View style={styles.container}>
+    <ForumBoard />
+
+  </View>
+}
+
+
+export default App;
+// export {default} from './storybook'; 
