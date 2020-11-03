@@ -10,15 +10,15 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
 // import ForumBoard from './pages/ForumBoard';
-import MessageMain from './pages/MessageMain';
+// import MessageMain from './pages/MessageMain';
 // import MpBoard from './pages/MpBoard';
 
 const styles = StyleSheet.create({
   container: {
      flex:1,
     //  backgroundColor:"red",
-     justifyContent:"center",
-     alignItems:"center"
+    //  justifyContent:"center",
+    //  alignItems:"center"
   }
 })
 
@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
 const App = () => {
   return <View style={styles.container}>
     {/* <ForumBoard /> */}
-    <MessageMain />
+    {/* <MessageMain /> */}
     {/* <MpBoard /> */}
 
   </View>
 }
 
 
-export default App;
-// export {default} from './storybook'; 
+// export default App;
+export {default} from './storybook'; 

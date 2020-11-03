@@ -15,13 +15,17 @@ const styles = StyleSheet.create({
     row: {
         flexDirection: "row",
     },
+    subheading: {
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
     texts: {
-        maxWidth: "60%",
+        maxWidth: "65%",
     },
     photo: {
-        maxWidth: "40%",
+        maxWidth: "30%",
         maxHeight: 80,
-        flexGrow: 1,
+        marginRight: "2%"
     },
     actions: {
         flexDirection: "row",
@@ -50,11 +54,11 @@ const styles = StyleSheet.create({
     }
 })
 
-const TradePost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
+const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize }) => {
 
     const [bordercolor, setBdColor] = useState("#E5E5E5");
 
-    const subject = { fontSize: fontsize ? fontsize : 22 };
+    const subject = { fontSize: fontsize ? fontsize : 19 };
     const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
 
     return <View style={[styles.container, styles.cont, bcolor]}
@@ -67,10 +71,15 @@ const TradePost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
                 source={require('../../public/tractor.png')}
             />
             <View style={styles.texts}>
-                <Text
-                    style={[styles.cont, subject]}
-                >{txt1}</Text>
-                <Text>{txt2}</Text>
+                <View style={styles.subheading}>
+                    <Text
+                        style={[styles.cont, subject]}
+                    >{txt1}</Text>
+                    <Text
+                        style={[styles.cont, subject]}
+                    >{txt2}</Text>
+                </View>
+                <Text>{txt3}</Text>
             </View>
         </View>
 
@@ -82,14 +91,14 @@ const TradePost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
                 />
                 <Text
                     style={styles.smtxt}
-                >{txt3}</Text>
+                >{txt4}</Text>
                 <Image
                     style={styles.icon}
                     source={require('../../public/eye.png')}
                 />
                 <Text
                     style={styles.smtxt}
-                >{txt4}</Text>
+                >{txt5}</Text>
             </View>
             <View style={styles.brcorner2}>
                 <Image
@@ -107,8 +116,9 @@ const TradePost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
 
 TradePost.defaultProps = {
     txt1: 'Tractor for sale',
-    txt2: 'Bought bigger one for more grains... 5 years, perfect condition, $500, message for more details...',
-    txt3: '25',
-    txt4: '79'
+    txt2: "$1000",
+    txt3: 'Bought bigger one for more grains... 5 years, perfect condition, $500, message for more details...',
+    txt4: '25',
+    txt5: '79'
 }
 export default TradePost;
