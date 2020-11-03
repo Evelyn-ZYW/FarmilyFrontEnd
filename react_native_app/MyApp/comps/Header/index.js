@@ -3,14 +3,19 @@ import { View, Text, StyleSheet, Image } from "react-native";
 
 const styles = StyleSheet.create({
     headerBox:{
+        position: "absolute",
+        top: 0,
         borderBottomColor:"#E5E5E5",
         borderBottomWidth:1.5,
+        minWidth: "100%",
+
     },
     innerHeadBox:{
+        // borderWidth: 1,
         alignItems:"center",
         flexDirection:"row",
         margin:5,
-        justifyContent:"center",
+        justifyContent:"space-between",
 
     },
     innerText:{
@@ -21,9 +26,11 @@ const styles = StyleSheet.create({
 
     },
     headIconL:{
-        position:"absolute",
-        left:15
-
+        position:"relative",
+        left:15,
+        maxHeight:35,
+        maxWidth:35,
+        resizeMode:"contain"
     },
     headText:{
         fontWeight:"bold",
@@ -31,10 +38,11 @@ const styles = StyleSheet.create({
 
     },
     headIconR:{
-        position:"absolute",
+        position:"relative",
         right:15,
-        minHeight:33,
-        minWidth:35,
+        maxHeight:35,
+        maxWidth:35,
+        resizeMode:"contain"
     }
 });
 
