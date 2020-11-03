@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderTopWidth: 1,
         borderColor: "#E5E5E5",
-        maxWidth: "100%",
-        maxHeight: 150,
+        width: "100%",
+        height: 150,
         padding: 15,
     },
 
@@ -16,12 +16,15 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     texts: {
-        maxWidth: "60%",
+        width: "60%",
+        height: 80
     },
     photo: {
-        maxWidth: "40%",
-        maxHeight: 80,
-        flexGrow: 1,
+        position: "absolute",
+        right: 0,
+        width: "40%",
+        height: 80,
+        // flexGrow: 1,
     },
     actions: {
         flexDirection: "row",
@@ -39,6 +42,7 @@ const styles = StyleSheet.create({
         marginRight: 5,
     },
     brcorner1: {
+
         maxWidth: "50%",
         flexDirection: "row",
     },
@@ -49,7 +53,7 @@ const styles = StyleSheet.create({
     }
 })
 
-const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
+const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize, imagePath }) => {
 
     const [bordercolor, setBdColor] = useState("#E5E5E5");
 
@@ -70,7 +74,7 @@ const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize }) => {
 
             <Image
                 style={styles.photo}
-                source={require('../../public/dogs.png')}
+                source={imagePath ? imagePath : require('../../public/dogs.png')}
             />
         </View>
 
