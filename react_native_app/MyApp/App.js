@@ -8,22 +8,30 @@
 
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Button from './comps/Button';
 
-const App = () => {
-  return <View style={styles.container}>
-    <Button />
-  </View>
-
-}
+// import ForumBoard from './pages/ForumBoard';
+import MessageMain from './pages/MessageMain';
+// import MpBoard from './pages/MpBoard';
 
 const styles = StyleSheet.create({
   container: {
      flex:1,
-     backgroundColor:"red",
+    //  backgroundColor:"red",
      justifyContent:"center",
      alignItems:"center"
   }
 })
-//export default App;
-export {default} from './storybook'; 
+
+
+const App = () => {
+  return <View style={styles.container}>
+    {/* <ForumBoard /> */}
+    <MessageMain />
+    {/* <MpBoard /> */}
+
+  </View>
+}
+
+
+export default App;
+// export {default} from './storybook'; 
