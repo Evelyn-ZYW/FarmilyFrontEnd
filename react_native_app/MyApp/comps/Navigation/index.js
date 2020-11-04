@@ -13,8 +13,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     borderTopWidth: 1.5,
     borderTopColor: "#E5E5E5",
-    minWidth: "100%"
-
+    minWidth: "100%",
+    backgroundColor:"white"
+    // zIndex: 2
   },
   icons: {
     width: 35,
