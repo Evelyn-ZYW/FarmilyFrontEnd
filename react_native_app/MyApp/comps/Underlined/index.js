@@ -10,13 +10,13 @@ const styles = StyleSheet.create({
   },
   underText: {
     fontWeight: "bold",
-    mzrgin: 10,
+    margin: 10,
     color: "#000000",
     fontSize: 24
   }
 });
 
-const UnderlinedButton = ({ text, bottom }) => {
+const Underlined = ({ text, bottom }) => {
   return (
     <View style={styles.outerBox} borderBottomColor={bottom}>
       <Text style={styles.underText}>{text}</Text>
@@ -24,9 +24,9 @@ const UnderlinedButton = ({ text, bottom }) => {
   );
 };
 
-UnderlinedButton.defaultProps = {
+Underlined.defaultProps = {
   text: "DEFAULT",
   bottom: "#FDB833"
 };
 
-export default UnderlinedButton;
+export default Underlined;

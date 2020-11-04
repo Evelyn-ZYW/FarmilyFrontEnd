@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import style from '../../storybook/stories/CenterView/style';
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection:"row",
+        flexDirection: "row",
         borderWidth: 1,
-        borderColor: "#DADADA",
+        // borderColor: "#DADADA",
         borderRadius: 8,
         width: 375,
         padding: 15,
+        marginBottom:20,
     },
     avatar: {
         width: 40,
@@ -22,13 +23,22 @@ const styles = StyleSheet.create({
     }
 })
 
-const MsgBox = ({ txt1, txt2 }) => {
+const MsgBox = ({ txt1, txt2, imagePath }) => {
 
-    return <View style={styles.container}>
+    const [bordercolor, setBdColor] = useState("#DADADA");
+
+    const bcolor = { borderColor: bordercolor ? bordercolor : "#DADADA" };
+
+
+
+    return <View style={[styles.container, styles.cont, bcolor]}
+    onTouchStart={() => { setBdColor("#C97064"); }}
+    onTouchEnd={() => { setBdColor("#DADADA"); }}
+    >
         <View>
             <Image
                 style={styles.avatar}
-                source={require('../../public/a1.png')}
+                source={imagePath ? imagePath : require('../../public/a1.png')}
             />
         </View>
         <View>
