@@ -64,7 +64,6 @@ const InputDate = () => {
         // Enable the option to swipe between months. Default = false
         enableSwipeMonths={true}
         />
-
     </View>
   );
 };

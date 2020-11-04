@@ -34,7 +34,7 @@ export default class ImageGallery extends React.Component{
        showsHorizontalScrollIndicator={false}
        style={galleryStyles.container}>
           {
-            images.map((image, index) => (
+            this.props.images.map((image, index) => (
               <Image 
               key={index}
               source={{uri: image}}
@@ -45,7 +45,7 @@ export default class ImageGallery extends React.Component{
 
         <View style={galleryStyles.pagination}>
           {
-            images.map((i,k) => (
+            this.props.images.map((i,k) => (
               <Text key={k} style={k==this.state.active ? galleryStyles.pagingActiveText : galleryStyles.pagingText}>⬤</Text>
             ))
           }

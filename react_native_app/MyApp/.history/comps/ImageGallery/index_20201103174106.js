@@ -32,7 +32,7 @@ export default class ImageGallery extends React.Component{
        horizontal 
        onScroll={this.change}
        showsHorizontalScrollIndicator={false}
-       style={galleryStyles.container}>
+       style={galleryStyles.scroll}>
           {
             images.map((image, index) => (
               <Image 
@@ -58,6 +58,10 @@ export default class ImageGallery extends React.Component{
 
 const galleryStyles = StyleSheet.create({
   container: {
+    width, 
+    height
+  },
+  scroll: {
     width, 
     height
   },

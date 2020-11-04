@@ -1,11 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const ChatBubble = (incomingMsg) => {
+const ChatBalloon = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>
-        {incomingMsg}
+        Hi! My name is Tig and I'm co-owner of SimplySeasonals in Abbottsford. I
+        saw your post, that you're selling your John Deere Tractor. I'm
+        interested in buying it from you!
       </Text>
     </View>
   );
@@ -31,8 +33,4 @@ const styles = StyleSheet.create({
   }
 });
 
-ChatBubble.defaultProps = {
-  incomingMsg: "Hi! My name is Tig and I'm co-owner of SimplySeasonals in Abbottsford. I saw your post, that you're selling your John Deere Tractor. I'm interested in buying it from you!"
-}
-
-export default ChatBubble;
+export default ChatBalloon;

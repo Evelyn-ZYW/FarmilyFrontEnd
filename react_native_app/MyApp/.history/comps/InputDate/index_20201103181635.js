@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
-import {Calendar} from 'react-native-calendars';
+// import {Calendar} from 'react-native-calendars';
 
 const InputDate = () => {
   return (
@@ -19,7 +19,7 @@ const InputDate = () => {
         />
       </View>
 
-      <Calendar
+      {/* <Calendar
         // Initially visible month. Default = Date()
         current={'2012-03-01'}
         // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
@@ -63,7 +63,7 @@ const InputDate = () => {
         renderHeader={(date) => {/*Return JSX*/}}
         // Enable the option to swipe between months. Default = false
         enableSwipeMonths={true}
-        />
+        /> */}
 
     </View>
   );

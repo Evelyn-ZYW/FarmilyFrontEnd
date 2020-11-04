@@ -152,7 +152,7 @@ InputTime.defaultProps = {
   time6:"2:00am - 3:00pm",
   time7:"3:00am - 4:00pm",
   time8:"4:00am - 5:00pm",
-  expanded: false
+  expanded: true
 }
 
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 
-const Avatar = ({username}) => {
+const Avatar = ({username, profilePic}) => {
   return (
     <View style={styles.container}>
       <Image //Will use Expo ImagePicker API here instead, just need guidance for this part...
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 
 Avatar.defaultProps = {
   username:"[USERNAME]",
-  // img:profilePic
+  img:profilePic
 }
 
 export default Avatar;

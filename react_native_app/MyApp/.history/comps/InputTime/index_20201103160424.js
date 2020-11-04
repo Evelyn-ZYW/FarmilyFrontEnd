@@ -21,12 +21,13 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8}) => 
           />
           <Text style={styles.text}>Time</Text>
         </View>
-        <TouchableOpacity onPress={() => {
-              setExpanded(!expanded);
-            }}>
+        <TouchableOpacity onPress={onPress}>
           <Image
             source={require('../../public/ArrowDown.png')}
             style={styles.arrow}
+            onPress={() => {
+              setExpanded(!expanded);
+            }}
           />
         </TouchableOpacity>
       </View>

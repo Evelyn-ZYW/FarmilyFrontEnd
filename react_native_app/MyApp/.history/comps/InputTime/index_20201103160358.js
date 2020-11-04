@@ -21,12 +21,13 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8}) => 
           />
           <Text style={styles.text}>Time</Text>
         </View>
-        <TouchableOpacity onPress={() => {
-              setExpanded(!expanded);
-            }}>
+        <TouchableOpacity onPress={onPress}>
           <Image
             source={require('../../public/ArrowDown.png')}
             style={styles.arrow}
+            onPress={() => {
+              setExpanded(!expanded);
+            }}
           />
         </TouchableOpacity>
       </View>
@@ -151,9 +152,12 @@ InputTime.defaultProps = {
   time5:"1:00am - 2:00pm",
   time6:"2:00am - 3:00pm",
   time7:"3:00am - 4:00pm",
-  time8:"4:00am - 5:00pm",
-  expanded: false
+  time8:"4:00am - 5:00pm"
 }
 
+
+InputTime.defaultProps = {
+  expanded: false
+}
 
 export default InputTime;

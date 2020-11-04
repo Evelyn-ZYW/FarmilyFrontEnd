@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
-import {Calendar} from 'react-native-calendars';
+// import {Calendar} from 'react-native-calendars';
 
 const InputDate = () => {
   return (
