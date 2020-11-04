@@ -7,28 +7,28 @@
  */
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 
-import ForumBoard from './pages/ForumBoard';
-// import MessageMain from './pages/MessageMain';
+//import ForumBoard from './pages/ForumBoard';
+import MessageMain from './pages/MessageMain';
 // import MpBoard from './pages/MpBoard';
-// import ShMain from './pages/ShMain';
+import ShMain from './pages/ShMain';
 
 
 const App = () => {
   return <View style={styles.container}>
-
-    <ForumBoard />
-    {/* <MessageMain /> */}
+    {/*<ForumBoard />*/}
+    {/*<MessageMain /> */}
     {/* <MpBoard /> */}
-    {/* <ShMain /> */}
-
+    <ShMain />
   </View>
 }
 
 const styles = StyleSheet.create({
   container: {
      flex:1,
+     marginTop:"10%",
+     marginBottom:"5%",
     //  backgroundColor:"red",
     //  justifyContent:"center",
     //  alignItems:"center"
