@@ -1,16 +1,16 @@
-import React from 'react';
-import {View, Text, Button} from 'react-native';
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
 
 const MyButton = () => {
-    //no <div> 
-    return <View>
-        <Text>A sample button</Text>
-        <Button 
-        title="Button"
-        color="gray"
-        onPress={()=>{alert("Hi!");}}
-        />
-        </View>
-}
-
+  return (
+    <View style={styles.container}>
+      <Text>Button to signup</Text>
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor:"red"
+  }
+})
 export default MyButton;
