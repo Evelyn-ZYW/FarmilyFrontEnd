@@ -10,4 +10,4 @@ import './Avatar.stories';
 import './InputDate.stories';
 import './InputTime.stories';
 import './ImageGallery.stories';
-import './ChatBubble.stories';
+import './ChatBalloon.stories';

@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const ChatBubble = ({msg, background}) => {
+const ChatBubble = (incomingMsg) => {
   return (
-    <View style={styles.container} backgroundColor={background}>
+    <View style={styles.container}>
       <Text style={styles.text}>
-        {msg}
+        {incomingMsg}
       </Text>
     </View>
   );
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#C97064",
     display: "flex",
     justifyContent: "flex-end",
-    width: 300,
+    width: 150,
     borderRadius: 20,
     padding: 18,
     margin: 10
@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
 });
 
 ChatBubble.defaultProps = {
-  msg: "Hi! My name is Tig! I saw your post, that you're selling your John Deere Tractor. I'm interested in buying it from you!",
-  background: "#C97064"
+  incomingMsg: "Hi! My name is Tig and I'm co-owner of SimplySeasonals in Abbottsford. I saw your post, that you're selling your John Deere Tractor. I'm interested in buying it from you!"
 }
 
 export default ChatBubble;

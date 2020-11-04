@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 
 ChatBubble.defaultProps = {
   msg: "Hi! My name is Tig! I saw your post, that you're selling your John Deere Tractor. I'm interested in buying it from you!",
-  background: "#C97064"
+  background: "#DEDEDE"
 }
 
 export default ChatBubble;
