@@ -23,3 +23,11 @@ import './InputDate.stories';
 import './InputTime.stories';
 import './ImageGallery.stories';
 import './ChatBubble.stories';
+//Raquel's stories
+import './Comfirm.stories';
+import './Inputs.stories';
+import './Popups.stories';
+import './Tabs.stories';
+import './Tab2.stories';
+import './Unread.stories';
+
