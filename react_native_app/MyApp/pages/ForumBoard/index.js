@@ -36,6 +36,7 @@ const ForumBoard = () => {
                 text="Discussion"
                 iconRight={require('../../public/pencil.png')}
                 iconLeft={require('../../public/filter.png')}
+                bottomColor="#FDB833"
             />
             <View style={styles.body}>
                 {/* this input is for testing pages only -- start */}

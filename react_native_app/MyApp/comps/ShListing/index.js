@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 
 })
 
-const ShListing = ({ txt1, txt2, txt3, txt4, txt5, fontsize }) => {
+const ShListing = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath }) => {
     const [bordercolor, setBdColor] = useState("#2775C9");
 
     const subject = { fontSize: fontsize ? fontsize : 22 };
@@ -54,7 +54,7 @@ const ShListing = ({ txt1, txt2, txt3, txt4, txt5, fontsize }) => {
             <Image
                 style={{ width: '100%', height: '100%', borderRadius: 10 }}
                 resizeMode='cover'
-                source={require('../../public/sh1.jpg')}
+                source={imagePath?imagePath:require('../../public/sh1.jpg')}
             />
         </View>
 

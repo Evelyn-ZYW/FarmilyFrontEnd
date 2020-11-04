@@ -1,7 +1,10 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 
-import MarketHeading from '../../comps/MarketHeading';
+
+import TradePost from '../../comps/TradePost';
+import Header from '../../comps/Header';
+import Navigation from '../../comps/Navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -9,33 +12,61 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    body: {
+        position: "absolute",
+        top: "14%",
+        alignItems: 'center',
+    },
+    row: {
+        flexDirection: "row",
+        // alignItems: "center"
+        justifyContent: "center"
+    },
+    icon: {
+        resizeMode: "contain",
+        maxWidth: 25,
+        maxHeight: 25,
+        margin: 10
+    }
 });
 
 const MpBoard = () => {
     return (
         <View style={styles.container}>
-            <Text>Header goes here</Text>
-            <Text>Input goes here</Text>
-            <MarketHeading />
-            <MarketHeading 
-            imagePath={require('../../public/a1.png')}
-            txt1="item 2 for sale"
-            txt2="$300"
-            txt3="its me again"
+            <Header
+                text="Discussion"
+                iconRight={require('../../public/pencil.png')}
+                iconLeft={require('../../public/filter.png')}
+                bottomColor="#00AC64"
             />
-            <MarketHeading 
-            imagePath={require('../../public/a3.png')}
-            txt1="item 3 for sale"
-            txt2="$700"
-            txt3="OMG"
-            />
-            <MarketHeading 
-            imagePath={require('../../public/a4.png')}
-            txt1="item 4 for sale"
-            txt2="$1000"
-            txt3="RichGuy"
-            />
-            <Text>Footer menu goes here</Text>
+            <View style={styles.body}>
+                {/* this input is for testing pages only -- start */}
+                <View style={styles.row}>
+                    <TextInput
+                        style={{ height: 40, width: "60%", borderColor: 'gray', borderWidth: 1, marginBottom: "6%", borderRadius: 5, textAlign: "center" }}
+                    >For testing, will fix later</TextInput>
+                    <Image
+                        source={require('../../public/search.png')}
+                        style={styles.icon}
+                    ></Image>
+                </View>
+                {/* this input is for testing pages only -- end */}
+                <TradePost />
+                <TradePost
+                    imagePath={require('../../public/tractor1.png')}
+                    txt1="item 2 for sale"
+                    txt2="$300"
+                    txt3="its me again"
+                />
+                <TradePost
+                    imagePath={require('../../public/tractor2.png')}
+                    txt1="item 3 for sale"
+                    txt2="$700"
+                    txt3="OMG"
+                />
+
+            </View>
+            <Navigation />
         </View>
     );
 };
