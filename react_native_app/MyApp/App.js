@@ -9,9 +9,22 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-// import ForumBoard from './pages/ForumBoard';
+import ForumBoard from './pages/ForumBoard';
 // import MessageMain from './pages/MessageMain';
 // import MpBoard from './pages/MpBoard';
+// import ShMain from './pages/ShMain';
+
+
+const App = () => {
+  return <View style={styles.container}>
+
+    <ForumBoard />
+    {/* <MessageMain /> */}
+    {/* <MpBoard /> */}
+    {/* <ShMain /> */}
+
+  </View>
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -22,16 +35,5 @@ const styles = StyleSheet.create({
   }
 })
 
-
-const App = () => {
-  return <View style={styles.container}>
-    {/* <ForumBoard /> */}
-    {/* <MessageMain /> */}
-    {/* <MpBoard /> */}
-
-  </View>
-}
-
-
-// export default App;
-export {default} from './storybook'; 
+export default App;
+// export {default} from './storybook'; 

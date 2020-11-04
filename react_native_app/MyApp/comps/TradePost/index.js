@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     subheading: {
+        minWidth: "100%",
         flexDirection: "row",
         justifyContent: "space-between"
     },
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     }
 })
 
-const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize }) => {
+const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath }) => {
 
     const [bordercolor, setBdColor] = useState("#E5E5E5");
 
@@ -68,7 +69,7 @@ const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize }) => {
         <View style={styles.row}>
             <Image
                 style={styles.photo}
-                source={require('../../public/tractor.png')}
+                source={imagePath?imagePath: require('../../public/tractor.png')}
             />
             <View style={styles.texts}>
                 <View style={styles.subheading}>

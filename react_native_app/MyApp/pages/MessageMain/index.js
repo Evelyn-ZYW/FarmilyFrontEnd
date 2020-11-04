@@ -35,6 +35,9 @@ const MessageMain = () => {
         <View style={styles.container}>
             <Header
                 text="Message"
+                iconLeft="none"
+                iconRight="none"
+                bottomColor="#C97064"
             />
 
             <View style={styles.body}>
