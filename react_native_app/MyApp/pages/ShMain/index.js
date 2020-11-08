@@ -57,9 +57,8 @@ const ShMain = () => {
                     txt1="Nanaimo Slaughterhouse"
                     txt2="We are the biggest slaughterhouse in Nanaimo..."
                     txt3="4.8"
-                    txt4="259"
+                    txt4="(259)"
                 />
-
             </View>
             <Navigation />
         </View>
