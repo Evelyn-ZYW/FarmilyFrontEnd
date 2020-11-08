@@ -14,13 +14,17 @@ const styles = StyleSheet.create({
     borderTopWidth: 1.5,
     borderTopColor: "#E5E5E5",
     minWidth: "100%",
-    backgroundColor:"white"
-    // zIndex: 2
+    backgroundColor:"white",
+    paddingLeft:15,
+    paddingRight:15
+    // zIndex: 2,
+
   },
   icons: {
     width: 35,
     marginTop: "2%",
     resizeMode: "contain",
+
   }
 });
 
