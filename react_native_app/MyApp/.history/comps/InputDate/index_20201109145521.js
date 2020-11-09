@@ -20,7 +20,6 @@ const InputDate = () => {
       </View>
 
       <Calendar
-        style={styles.calendar}
         // Initially visible month. Default = Date()
         current={'2020-11-08'}
         // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
@@ -45,7 +44,7 @@ const InputDate = () => {
         // day from another month that is visible in calendar page. Default = false
         disableMonthChange={true}
         // If firstDay=1 week starts from Monday. Note that dayNames and dayNamesShort should still start from Sunday.
-        firstDay={0}
+        firstDay={2}
         // Hide day names. Default = false
         hideDayNames={false}
         // Show week numbers to the left. Default = false
@@ -114,16 +113,6 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30
   },
-
-  calendar: {
-    borderRadius: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 10, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 1,  
-    elevation: 3,
-    marginTop: 10
-  }
 });
 
 export default InputDate;
