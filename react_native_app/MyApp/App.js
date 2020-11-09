@@ -7,33 +7,36 @@
  */
 
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 
 //import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
+import OpenMessage from './pages/OpenMessage';
 // import MpBoard from './pages/MpBoard';
 import ShMain from './pages/ShMain';
 
-
 const App = () => {
-  return <View style={styles.container}>
-    {/*<ForumBoard />*/}
-    {/*<MessageMain /> */}
-    {/* <MpBoard /> */}
-    <ShMain />
-  </View>
-}
+  return (
+    <View style={styles.container}>
+      {/* <ForumBoard /> */}
+      {/* <MessageMain /> */}
+      {<OpenMessage />}
+      {/* <MpBoard /> */}
+      {/* <ShMain /> */}
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
-     flex:1,
-     marginTop:"10%",
-     marginBottom:"5%",
+    flex: 1,
+    marginTop: '10%',
+    marginBottom: '5%',
     //  backgroundColor:"red",
     //  justifyContent:"center",
     //  alignItems:"center"
-  }
-})
+  },
+});
 
 export default App;
-// export {default} from './storybook'; 
+// export {default} from './storybook';
