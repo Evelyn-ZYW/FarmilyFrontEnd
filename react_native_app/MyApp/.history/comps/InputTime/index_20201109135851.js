@@ -8,8 +8,6 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
 
   const [isdrop, setDrop] = useState(false);
 
-  const inputcont = {display:isdrop?isdrop:"flex"}
-
   useEffect(()=>{
     setDrop(dropdown);
   }, [dropdown]);
@@ -26,18 +24,18 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
           />
           <Text style={styles.text}>Time</Text>
         </View>
-        <TouchableOpacity style={styles.hourCont} 
-          onPress={()=>{
-            setDrop(!isdrop);
-          }}>
+        <TouchableOpacity style={styles.hourCont}>
           <Image
             source={require('../../public/ArrowDown.png')}
             style={styles.arrow}
+            onPress={()=>{
+              setDrop(!isdrop);
+            }}
           />
         </TouchableOpacity>
       </View>
 
-      <View isdrop={isdrop} style={[styles.hourContainer, inputcont]}>
+      <View style={styles.hourContainer}>
         <View style={styles.timeBlock}>
           <Text style={styles.time}>{time1}</Text>
         </View>
@@ -117,7 +115,7 @@ const styles = StyleSheet.create({
 
   hourContainer: {
     backgroundColor: "#FFFFFF",
-    // display: "flex",
+    display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
