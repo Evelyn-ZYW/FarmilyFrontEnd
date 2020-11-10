@@ -9,7 +9,6 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
   
   const [isdrop, setDrop] = useState(false);
 
-  const hourCont = {display: isdrop ? "flex" : "none"}
 
   useEffect(()=>{
     setDrop(dropdown);
@@ -38,7 +37,7 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
         </TouchableOpacity>
       </View>
 
-      <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
+      <View isdrop={isdrop} style={[styles.hourContainer]}>
         <View style={styles.timeBlock}>
           <Text style={styles.time}>{time1}</Text>
         </View>
