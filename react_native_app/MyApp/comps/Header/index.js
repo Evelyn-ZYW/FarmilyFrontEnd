@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         borderBottomColor:"#E5E5E5",
         borderBottomWidth:1.5,
         minWidth: "100%",
-
+        minHeight: "15%",
     },
     innerHeadBox:{
         // borderWidth: 1,
@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     headText:{
         fontWeight:"bold",
         fontSize:24,
-
     },
     headIconR:{
         position:"relative",
@@ -43,12 +42,17 @@ const styles = StyleSheet.create({
         maxHeight:35,
         maxWidth:35,
         resizeMode:"contain"
+    },
+    logo:{
+        resizeMode:"contain",
+        maxWidth:300,
     }
 });
 
-const Header = ({iconLeft, text, iconRight, bottomColor}) => {
+const Header = ({iconLeft, text, iconRight, bottomColor, logo}) => {
   return (
     <View style={styles.headerBox}>
+        <Image source={logo} style={styles.logo} />
         <View style={styles.innerHeadBox}>
             <Image source={iconLeft} style={styles.headIconL}/>
             <View style={styles.innerText} borderBottomColor={bottomColor}>
@@ -61,10 +65,11 @@ const Header = ({iconLeft, text, iconRight, bottomColor}) => {
 };
 
 Header.defaultProps = {
-    iconLeft:require("./arrowleft.png"),
-    text: "Default",
-    iconRight:require("./send.png"),
-    bottomColor: "#FDB833"
+    iconLeft:null,
+    text: null,
+    iconRight:null,
+    bottomColor: null,
+    logo: null
 };
 
 export default Header;

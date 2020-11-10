@@ -16,9 +16,11 @@ const styles = StyleSheet.create({
   }
 });
 
-const Underlined = ({ text, bottom }) => {
+const Underlined = ({ text, bottom, bottomWidth, onPress }) => {
   return (
-    <View style={styles.outerBox} borderBottomColor={bottom}>
+    <View
+      onPress={onPress}
+      style={styles.outerBox} borderBottomColor={bottom} borderBottomWidth={bottomWidth}>
       <Text style={styles.underText}>{text}</Text>
     </View>
   );
@@ -26,7 +28,8 @@ const Underlined = ({ text, bottom }) => {
 
 Underlined.defaultProps = {
   text: "DEFAULT",
-  bottom: "#FDB833"
+  bottom: "#FDB833",
+  onPress: () => { }
 };
 
 export default Underlined;

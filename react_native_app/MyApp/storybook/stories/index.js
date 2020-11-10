@@ -9,6 +9,9 @@ import './MsgBox.stories';
 import './ForumPost.stories';
 import './TradePost.stories';
 import './ShListing.stories';
+import './Comment.stories';
+import './PostBodyD.stories';
+import './PostBodyM.stories';
 
 //Julie's stories
 import './Header.stories';
