@@ -35,12 +35,12 @@ const App = () => {
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
 
-    {/* <ShFilter /> */}
+    <ShFilter />
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
     {/* <OneDiscussion /> */}
-    <Profile/>
+    {/* <Profile/> */}
 
     {/* <ComfirmInfo /> */}
 

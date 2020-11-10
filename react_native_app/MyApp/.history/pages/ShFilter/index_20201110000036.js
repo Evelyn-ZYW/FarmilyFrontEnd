@@ -7,7 +7,6 @@ import InputTime from '../../comps/InputTime';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import Outlined from '../../comps/Outlined';
-import ButtonF from '../../comps/ButtonF';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,10 +17,9 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height
     },
     body: {
-        // position: "absolute",
-        top: "40%",
+        position: "absolute",
+        top: "14%",
         alignItems: 'center',
-        margin: 40
     },
     // row: {
     //     flexDirection: "row",
@@ -35,25 +33,24 @@ const styles = StyleSheet.create({
         margin: 10
     },
     scroll: {
-        maxHeight: "100%"
+        maxHeight: "95%"
     },
     cattle: {
         display: "flex",
         flexDirection: "row"
-        
     }
 });
 
 const ShFilter = () => {
     return (
         <View style={styles.container}>
-             <Header
-                        text="Slaughterhouse"
-                        bottomColor="#2775C9"
-                    />
-                    <ScrollView style={styles.scroll}>
-            {/* <View style={{ height:100 }}> */}
-                
+            <Header
+                text="Slaughterhouse"
+                bottomColor="#2775C9"
+            />
+            <View style={{ height:500 }}>
+                <ScrollView style={styles.scroll}>
+
                     <View style={styles.body}>
                         <InputDate />
                         <InputTime />
@@ -64,9 +61,8 @@ const ShFilter = () => {
                         <Outlined text="Pork"></Outlined>
                         <Outlined text="Sheep"></Outlined>
                     </View>
-              
-            {/* </View> */}
-            </ScrollView>
+                </ScrollView>
+            </View>
             <Navigation />
         </View>
     );
