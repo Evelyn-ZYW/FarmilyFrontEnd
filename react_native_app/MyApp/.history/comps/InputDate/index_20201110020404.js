@@ -88,7 +88,7 @@ const InputDate = ({dropdown}) => {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    margin: 15,
+    margin: 20,
     alignSelf: "stretch"
     },
 

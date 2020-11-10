@@ -42,6 +42,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginLeft: 40,
         marginRight: 40
+    },
+    button: {
+        backgroundColor: "#ffffff"
     }
 });
 

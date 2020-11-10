@@ -88,7 +88,7 @@ const InputDate = ({dropdown}) => {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    margin: 15,
+    margin: 20,
     alignSelf: "stretch"
     },
 
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
   },
 
   calendar: {
-    borderRadius: 10,
+    borderRadius: 5,
     // display: "flex",
     // flexDirection: "row",
     // justifyContent:"space-between",
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 1,  
     elevation: 3,
-    marginTop: 10
+    marginTop: 5
   }
 });
 
