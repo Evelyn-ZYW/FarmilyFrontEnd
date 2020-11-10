@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, SegmentedControlIOSComponent } from "react-native";
 
 
 
 
 const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, dropdown}) => {
 
+  const hourCont = {display:dropdown?dropdown:"none"};
   
   const [isdrop, setDrop] = useState(false);
 
-  const hourCont = {display: isdrop ? "flex" : "none"}
+  const inputcont = {display:isdrop?isdrop:"flex"}
 
   useEffect(()=>{
     setDrop(dropdown);
@@ -38,7 +39,7 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
         </TouchableOpacity>
       </View>
 
-      <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
+      <View isdrop={isdrop} style={[styles.hourContainer, inputcont]}>
         <View style={styles.timeBlock}>
           <Text style={styles.time}>{time1}</Text>
         </View>

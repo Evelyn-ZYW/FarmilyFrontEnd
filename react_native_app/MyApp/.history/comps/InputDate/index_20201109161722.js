@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
+import React from "react";
+import { View, Text, Image, StyleSheet } from "react-native";
 import {Calendar} from 'react-native-calendars';
 
-const InputDate = (dropdown) => {
-
-  const [isdrop, setDrop] = useState(false);
-  const dateCont = {display: isdrop ? "flex" : "none"}
-
-  useEffect(()=>{
-    setDrop(dropdown);
-  }, [dropdown]);
-
+const InputDate = () => {
   return (
     <View style={styles.container}>
       <View style={styles.dateContainer}>
@@ -21,18 +13,14 @@ const InputDate = (dropdown) => {
           />
           <Text style={styles.text}>Date</Text>
         </View>
-        <TouchableOpacity onPress={()=>{
-          setDrop(!isdrop);
-        }}>
-          <Image
-            source={require('../../public/ArrowDown.png')}
-            style={styles.arrow}
-          />
-        </TouchableOpacity>
+        <Image
+          source={require('../../public/ArrowDown.png')}
+          style={styles.arrow}
+        />
       </View>
 
       <Calendar
-        style={styles.calendar, dateCont}
+        style={styles.calendar}
         // Initially visible month. Default = Date()
         current={'2020-11-08'}
         // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
@@ -87,8 +75,8 @@ const styles = StyleSheet.create({
     display: "flex",
     margin: 20,
     alignSelf: "stretch",
-    width: 250 
-    },
+    width: 400
+  },
 
   dateContainer: {
     backgroundColor: "#FFFFFF",

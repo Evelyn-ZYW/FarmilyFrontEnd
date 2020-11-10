@@ -13,7 +13,6 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import MessageMain from './pages/MessageMain';
 // import MpBoard from './pages/MpBoard';
 import ShMain from './pages/ShMain';
-import ShFilter from './pages/ShFilter';
 
 
 const App = () => {

@@ -4,8 +4,8 @@ import {Calendar} from 'react-native-calendars';
 
 const InputDate = (dropdown) => {
 
+  const dateCont = {display:dropdown?dropdown:"hidden"};
   const [isdrop, setDrop] = useState(false);
-  const dateCont = {display: isdrop ? "flex" : "none"}
 
   useEffect(()=>{
     setDrop(dropdown);
@@ -21,7 +21,7 @@ const InputDate = (dropdown) => {
           />
           <Text style={styles.text}>Date</Text>
         </View>
-        <TouchableOpacity onPress={()=>{
+        <TouchableOpacity style={styles.dateCont} onPress={()=>{
           setDrop(!isdrop);
         }}>
           <Image
@@ -32,7 +32,7 @@ const InputDate = (dropdown) => {
       </View>
 
       <Calendar
-        style={styles.calendar, dateCont}
+        style={styles.calendar}
         // Initially visible month. Default = Date()
         current={'2020-11-08'}
         // Minimum date that can be selected, dates before minDate will be grayed out. Default = undefined
