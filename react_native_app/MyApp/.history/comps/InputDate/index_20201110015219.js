@@ -33,7 +33,7 @@ const InputDate = ({dropdown}) => {
         </TouchableOpacity>
       </View>
 
-      <View iddrop={iddrop} style={[styles.calendar, dateCont]}>
+      <View iddrop={iddrop} style={[styles.dateContainer, dateCont]}>
         <Calendar
           // Initially visible month. Default = Date()
           current={'2020-11-08'}
@@ -88,7 +88,7 @@ const InputDate = ({dropdown}) => {
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    margin: 15,
+    margin: 20,
     alignSelf: "stretch"
     },
 
@@ -96,14 +96,13 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    // justifyContent: "space-between",
+    // alignItems: "center",
     borderColor: "#D3D3D3",
     borderRadius: 8,
     padding: 5,
     borderColor: "#DADADA",
     borderWidth: 2,
-    marginTop: 10
   },
 
   text: {
@@ -132,11 +131,7 @@ const styles = StyleSheet.create({
   },
 
   calendar: {
-    borderRadius: 10,
-    // display: "flex",
-    // flexDirection: "row",
-    // justifyContent:"space-between",
-    // alignItems: "center",
+    borderRadius: 5,
     shadowColor: '#000',
     shadowOffset: { width: 10, height: 0 },
     shadowOpacity: 0.8,

@@ -72,7 +72,7 @@ const InputTime = ({time1, time2, time3, time4, time5, time6, time7, time8, drop
 const styles = StyleSheet.create({
   container: {
     display: "flex",
-    margin: 15,
+    margin: 20,
     alignSelf: "stretch"
   },
 
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderColor: "#DADADA",
+    borderColor: "#D3D3D3",
     borderWidth: 2,
     borderRadius: 8,
     padding: 5,
@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 1,  
     elevation: 3
+
   },
 
   time: {
