@@ -10,6 +10,7 @@ import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
 
+
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
 import MpBoard from './pages/MpBoard';
@@ -19,17 +20,30 @@ import Main1 from './pages/Main1';
 import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
 
+// Rauqel's pages
+import ComfirmInfo from './pages/ComfirmInfo';
+import PopUp from './pages/Popup';
+import Profile from './pages/Profile';
+
+
+
 
 const App = () => {
   return <View style={styles.container}>
-    {/*<ForumBoard />*/}
+    {/* <ForumBoard /> */}
     {/*<MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
+
     {/* <ShFilter /> */}
+    {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
-    <OneDiscussion />
+    {/* <OneDiscussion /> */}
+    <Profile/>
+
+    {/* <ComfirmInfo /> */}
+
   </View>
 }
 
