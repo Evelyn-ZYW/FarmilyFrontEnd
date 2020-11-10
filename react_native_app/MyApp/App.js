@@ -8,12 +8,16 @@
 
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
+import { NativeRouter, Route, Link } from "react-router-native";
 
-//import ForumBoard from './pages/ForumBoard';
+import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
-// import MpBoard from './pages/MpBoard';
+import MpBoard from './pages/MpBoard';
 import ShMain from './pages/ShMain';
 import ShFilter from './pages/ShFilter';
+import Main1 from './pages/Main1';
+import Main2 from './pages/Main2';
+import OneDiscussion from './pages/OneDiscussion';
 
 
 const App = () => {
@@ -22,20 +26,23 @@ const App = () => {
     {/*<MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
-    <ShFilter />
+    {/* <ShFilter /> */}
+    {/* <Main1 /> */}
+    {/* <Main2 /> */}
+    <OneDiscussion />
   </View>
 }
 
 const styles = StyleSheet.create({
   container: {
-     flex:1,
-     marginTop:"10%",
-     marginBottom:"5%",
-    //  backgroundColor:"red",
+    flex: 1,
+    //  marginTop:"10%",
+    //  marginBottom:"5%",
+    //  backgroundColor:"#DADADA",
     //  justifyContent:"center",
     //  alignItems:"center"
   }
 })
 
 export default App;
-// export {default} from './storybook'; 
+// export { default } from './storybook';

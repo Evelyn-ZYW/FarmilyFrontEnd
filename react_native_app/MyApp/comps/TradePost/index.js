@@ -8,8 +8,9 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         // borderColor: "#E5E5E5",
         maxWidth: "100%",
-        maxHeight: 150,
+        // maxHeight: 150,
         padding: 15,
+        overflow:"hidden"
     },
 
     row: {
@@ -55,14 +56,15 @@ const styles = StyleSheet.create({
     }
 })
 
-const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath }) => {
+const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath, icon1, icon2, icon3, icon4, maxheight }) => {
 
     const [bordercolor, setBdColor] = useState("#E5E5E5");
 
     const subject = { fontSize: fontsize ? fontsize : 19 };
+    const height = { maxHeight: maxheight ? maxheight : 150 };
     const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
 
-    return <View style={[styles.container, styles.cont, bcolor]}
+    return <View style={[styles.container, styles.cont, bcolor, height]}
         onTouchStart={() => { setBdColor("#00AC64"); }}
         onTouchEnd={() => { setBdColor("#E5E5E5"); }}
     >
@@ -88,14 +90,16 @@ const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath }) => {
             <View style={styles.brcorner1}>
                 <Image
                     style={styles.icon}
-                    source={require('../../public/heart.png')}
+                    // source={require('../../public/heart.png')}
+                    source={icon1}
                 />
                 <Text
                     style={styles.smtxt}
                 >{txt4}</Text>
                 <Image
                     style={styles.icon}
-                    source={require('../../public/eye.png')}
+                    // source={require('../../public/eye.png')}
+                    source={icon2}
                 />
                 <Text
                     style={styles.smtxt}
@@ -104,11 +108,13 @@ const TradePost = ({ txt1, txt2, txt3, txt4, txt5, fontsize, imagePath }) => {
             <View style={styles.brcorner2}>
                 <Image
                     style={styles.icon}
-                    source={require('../../public/share.png')}
+                    // source={require('../../public/share.png')}
+                    source={icon3}
                 />
                 <Image
                     style={styles.icon}
-                    source={require('../../public/more.png')}
+                    // source={require('../../public/more.png')}
+                    source={icon4}
                 />
             </View>
         </View>
@@ -120,6 +126,11 @@ TradePost.defaultProps = {
     txt2: "$1000",
     txt3: 'Bought bigger one for more grains... 5 years, perfect condition, $500, message for more details...',
     txt4: '25',
-    txt5: '79'
+    txt5: '79',
+    icon1: require("../../public/heart.png"),
+    icon2: require("../../public/eye.png"),
+    icon3: require("../../public/share.png"),
+    icon4: require("../../public/more.png"),
+    maxHeight: 150,
 }
 export default TradePost;
