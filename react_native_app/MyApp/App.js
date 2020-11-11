@@ -18,6 +18,8 @@ import ShFilter from './pages/ShFilter';
 import Main1 from './pages/Main1';
 import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 
 const App = () => {
@@ -30,6 +32,8 @@ const App = () => {
     {/* <Main1 /> */}
     {/* <Main2 /> */}
     <OneDiscussion />
+    {/*<Home />*/}
+    {/*<Login />*/}
   </View>
 }
 
