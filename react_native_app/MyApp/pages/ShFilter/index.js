@@ -7,7 +7,7 @@ import InputTime from '../../comps/InputTime';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import Outlined from '../../comps/Outlined';
-import ButtonF from '../../comps/ButtonF';
+import Button from '../../comps/Button';
 
 const styles = StyleSheet.create({
     container: {

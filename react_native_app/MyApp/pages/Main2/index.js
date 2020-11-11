@@ -7,7 +7,7 @@ import LogoHeader from '../../comps/LogoHeader';
 import Navigation from '../../comps/Navigation';
 import Underlined from '../../comps/Underlined';
 import TradePost from '../../comps/TradePost';
-import ButtonF from '../../comps/ButtonF';
+import Button from '../../comps/Button';
 
 const styles = StyleSheet.create({
     container: {

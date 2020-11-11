@@ -48,11 +48,11 @@ const App = () => {
     {/* <Main2 /> */}
 
     {/* <Profile/> */}
-    <Favorite/>
-    {/* <ComfirmInfo /> */}
+    {/* <Favorite/> */}
+    <ComfirmInfo />
     {/* <Notification/> */}
 
-//     <OneDiscussion />
+{/* //     <OneDiscussion /> */}
     {/*<Home />*/}
     {/*<Login />*/}
 

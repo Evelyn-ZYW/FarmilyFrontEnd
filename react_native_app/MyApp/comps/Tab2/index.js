@@ -1,6 +1,7 @@
 // import React from "react";
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet,Image, TouchableOpacity } from "react-native";
+import PostBodyD from '../../comps/PostBodyD';
 
 const MyTab2 = ({iconExpand, text,dropdown}) => {
   const [isdrop, setDrop] = useState(false);
@@ -14,23 +15,28 @@ const MyTab2 = ({iconExpand, text,dropdown}) => {
     
     <View style={styles.container}>
 <View style={styles.timeContainer}>
-      <Text style={styles.title}>{text}</Text>
-  
+      {/* <Text style={styles.title}>{text}</Text> */}
       <TouchableOpacity style={styles.hourCont} 
           onPress={()=>{
             setDrop(!isdrop);
           }}>
-          <Image source={iconExpand} style={styles.headIconE}/>
+
+             <Text style={styles.title}>{text}</Text>
+          {/* <Image source={iconExpand} style={styles.headIconE}/> */}
         </TouchableOpacity>
 
+        <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
+       <PostBodyD />
         </View>
 
-        <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
-        <View style={styles.timeBlock}>
-          <Text style={styles.time}>Test</Text>
         </View>
+        {/* <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
+       <PostBodyD />
+        </View> */}
+        
         </View>
-    </View>
+   
+ 
   );
 };
 const styles = StyleSheet.create({
@@ -64,20 +70,32 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "center",
     // marginHorizental: 100,
-    marginLeft: 20,
+    // marginLeft: 20,
     fontWeight:"bold"
-   
 
   },
-  headIconE: {
-    position:"relative",
-    left:20,
-    marginVertical:5,
-    maxHeight:30,
-    maxWidth:30,
-    resizeMode:"contain"
-  }
+  // headIconE: {
+  //   position:"relative",
+  //   right:0,
+  //   // marginVertical:5,
+  //   maxHeight:30,
+  //   maxWidth:30,
+  //   resizeMode:"contain"
+  // },
   
+  hourContainer:{
+    // backgroundColor: "#FFFFFF",
+     display: "flex",
+     flexDirection: "column",
+     justifyContent: "center",
+     alignItems: "center",
+    //  alignSelf: "stretch",
+     resizeMode:"contain",
+     marginTop:"10%",
+     marginRight:"30%"
+    //  marginRight:70
+    
+  },
 });
 MyTab2.defaultProps = {
   iconExpand:require("./expand_more.png"),
