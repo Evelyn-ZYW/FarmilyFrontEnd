@@ -42,8 +42,8 @@ const Login = ()=>{
         <View style={styles.loginpage}>
             <Image source={require('./logo.png')} style={styles.logo} />
             <View style={styles.loginInput}>
-                    <UserTextInput text="Username or Email Address"/>
-                    <UserTextInput />
+                    <UserTextInput placeholder="Username or Email Address"/>
+                    <UserTextInput placeholder="Password"/>
                 <TouchableOpacity>
                     <Text style={styles.forgetP}>Forgot Password?</Text>
                 </TouchableOpacity>
