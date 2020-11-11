@@ -7,7 +7,8 @@ import LogoHeader from '../../comps/LogoHeader';
 import Navigation from '../../comps/Navigation';
 import Underlined from '../../comps/Underlined';
 import TradePost from '../../comps/TradePost';
-import Button from '../../comps/Button';
+import ButtonF from '../../comps/ButtonF';
+
 
 const styles = StyleSheet.create({
     container: {
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         position: "absolute",
-        bottom: "8%",
+        bottom: "10%",
         left: "1%"
     },
     icon: {
@@ -43,14 +44,18 @@ const styles = StyleSheet.create({
         maxHeight: "60%",
         borderWidth: 3,
         overflow: "hidden",
-        borderColor: "#00AC64"
+        borderColor: "#FDB833"
     },
 });
 
-const Main2 = () => {
+const Main1 = () => {
     // const [bdcolor, setBdcolor] = useState(null);
+    const [btcolor, setBtColor] = useState(null);
 
     // const bcolor = { borderColor: bcolor ? bcolor : "" }
+    const ShClick = () => {
+        setBtColor("#2775C9");
+    }
 
     return (
         <View style={styles.container}>
@@ -59,47 +64,49 @@ const Main2 = () => {
             />
             <View style={styles.body}>
                 <View style={styles.category}>
-                    <Link to="/discussion">
+
+                    <Underlined
+                        text="Discussion"
+                        bottomWidth={3}
+                    />
+                    <Link to="/Main2">
                         <Underlined
-                            text="Discussion"
+                            onPress={() => { setBdcolor("#00AC64") }}
                             bottomWidth={null}
-                            bottom={null}
+                            text="Market"
                         />
                     </Link>
-                    <Underlined
-                        bottomWidth={3}
-                        bottom="#00AC64"
-                        text="Market"
-                    />
+
                 </View>
                 <ScrollView style={styles.midCont}>
                     <View >
-                        < TradePost txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
-                        < TradePost txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
-                        < TradePost txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
-                        < TradePost txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
+                        < TradePost txt2={null} txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
+                        < TradePost txt2={null} txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
+                        < TradePost txt2={null} txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
+                        < TradePost txt2={null} txt4={null} txt5={null} icon1={null} icon2={null} icon3={null} icon4={null} maxheight={100} />
                     </View>
                 </ScrollView>
 
-                <Button text="MORE" bgcolor="#00AC64" />
+                <ButtonF text="MORE" />
             </View>
-
             <View style={styles.row}>
-                <Link to="/">
-                    <Underlined
-                        onPress={() => { setBdcolor("#00AC64") }}
-                        text="Slaughterhouses"
-                        bottomWidth={null}
-                    />
-                </Link>
+                <Underlined
+                    bottom={btcolor}
+                    // bottomWidth={3}
+                    onPress={ShClick}
+                    text="Slaughterhouses"
+                // bottomWidth={null}
+                />
                 <Image
                     style={styles.icon}
                     source={require("../../public/forward.png")}
                 />
+
             </View>
+
             <Navigation />
         </View>
     );
 };
 
-export default Main2;
+export default Main1;
