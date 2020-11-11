@@ -40,17 +40,17 @@ const App = () => {
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
  
-    <ShFilter />
+    {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
 
     {/* <Profile/> */}
-    {/* <Favorite/> */}
+    <Favorite/>
     {/* <ComfirmInfo /> */}
     {/* <Notification/> */}
 
-{/* //     <OneDiscussion /> */}
+//     <OneDiscussion />
     {/*<Home />*/}
     {/*<Login />*/}
 

@@ -67,7 +67,7 @@ const ComfirmInfo = () => {
         </View>
     );
 };
-Button.defaultProps= {
+ButtonF.defaultProps= {
     bgcolor: "#2775C9",
   text: "Comfirm"
   
