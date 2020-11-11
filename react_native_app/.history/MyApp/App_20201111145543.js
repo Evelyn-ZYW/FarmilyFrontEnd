@@ -42,7 +42,7 @@ const App = () => {
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
  
-    {/* <ShFilter /> */}
+    <ShFilter />
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
@@ -58,7 +58,7 @@ const App = () => {
 
 {/* //     <OneDiscussion /> */}
     {/*<Home />*/}
-    <Login />
+    {/*<Login />*/}
 
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
