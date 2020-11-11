@@ -41,7 +41,7 @@ const App = () => {
     {/*<MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
- 
+
     {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
@@ -56,13 +56,13 @@ const App = () => {
 
     {/* <Notification/> */}
 
-{/* //     <OneDiscussion /> */}
+    <OneDiscussion />
     {/*<Home />*/}
     {/*<Login />*/}
 
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
-    {/*<ResetP />*/}
+    {/* <ResetP /> */}
   </View>
 }
 

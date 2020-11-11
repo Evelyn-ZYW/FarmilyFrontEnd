@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import style from "../../storybook/stories/CenterView/style";
 
 import ImageGallery from '../ImageGallery';
-import ButtonF from '../ButtonF';
+import Button from '../Button';
 
 const styles = StyleSheet.create({
     container: {
@@ -38,7 +38,7 @@ const PostBodyM = ({ txt1 }) => {
                 <ImageGallery />
             </View>
             <View style={styles.row}>
-                <ButtonF
+                <Button
                 text="Contact the Seller" 
                 bgcolor="#00AC64"
                 />
