@@ -1,12 +1,18 @@
 import React from "react";
+
 import { View, Text, StyleSheet, Image } from "react-native";
 
 const MyTab = ({iconView, text}) => {
+  // const [bordercolor, setBdColor] = useState("#E5E5E5");
+
+  //   const subject = { fontSize: fontsize ? fontsize : 22 };
+  //   const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
   return (
     <View style={styles.container}>
       
       <Text style={styles.title}>{text}</Text>
       <Image source={iconView} style={styles.headIconV}/>
+      
     </View>
   );
 };
@@ -24,12 +30,12 @@ const styles = StyleSheet.create({
     borderLeftColor: "#fff",
     // borderColor: "#2775C9",
     maxWidth: "100%",
-    maxHeight: 80,
+    maxHeight: 75,
     justifyContent: "center",
     // marginVertical: 8,
     // marginTop: 100,
     marginHorizontal: 40,
-    padding: 20,
+    padding: 13,
     display:"flex",
     flexDirection:"row",
     alignContent:"space-between"

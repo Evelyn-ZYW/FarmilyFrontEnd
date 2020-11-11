@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput, StyleSheet,Text } from "react-native";
 
 const UserTextInput = ({text}) => {
-  const [value, onChangeText] = React.useState({text});
+  const [value, onChangeText] = React.useState("username");
 
   return (
    
@@ -16,7 +16,7 @@ const UserTextInput = ({text}) => {
         marginTop: 50
       }}
       onChangeText={(text) => onChangeText(text)}
-
+      
       value={value}
     />
   );

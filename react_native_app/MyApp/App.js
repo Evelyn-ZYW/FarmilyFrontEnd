@@ -24,6 +24,8 @@ import OneDiscussion from './pages/OneDiscussion';
 import ComfirmInfo from './pages/ComfirmInfo';
 import PopUp from './pages/Popup';
 import Profile from './pages/Profile';
+import Favorite from './pages/Favorite';
+import Notification from './pages/Notification';
 
 
 
@@ -34,15 +36,17 @@ const App = () => {
     {/*<MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
-
-    <ShFilter />
+ 
+    {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
     {/* <OneDiscussion /> */}
     {/* <Profile/> */}
-
+    <Favorite/>
     {/* <ComfirmInfo /> */}
+    {/* <Notification/> */}
+
 
   </View>
 }
