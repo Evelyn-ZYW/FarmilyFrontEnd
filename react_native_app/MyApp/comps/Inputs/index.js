@@ -12,12 +12,14 @@ const UserTextInput = ({text, placeholder}) => {
         width: 272,
         borderColor: "#DADADA",
         borderWidth: 1,
-        marginBottom:40
+        marginBottom:40,
+        padding:10
       }}
       onChangeText={(text) => onChangeText(text)}
 
       value={value}
       placeholder={placeholder}
+      placeholderTextColor="#000000"
     />
   );
 };
