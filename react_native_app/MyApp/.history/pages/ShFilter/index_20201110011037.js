@@ -7,7 +7,6 @@ import InputTime from '../../comps/InputTime';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import Outlined from '../../comps/Outlined';
-import ButtonF from '../../comps/ButtonF';
 
 const styles = StyleSheet.create({
     container: {
@@ -18,8 +17,9 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height
     },
     body: {
+        // position: "absolute",
+        top: "10%",
         alignItems: 'center',
-        margin: 40
     },
     // row: {
     //     flexDirection: "row",
@@ -33,15 +33,14 @@ const styles = StyleSheet.create({
         margin: 10
     },
     scroll: {
-        maxHeight: "100%"
+        maxHeight: "95%"
     },
     cattle: {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
-        marginLeft: 40,
-        marginRight: 40
+        margin: 30
     }
 });
 
@@ -65,7 +64,6 @@ const ShFilter = () => {
                         <Outlined text="Pork"></Outlined>
                         <Outlined text="Sheep"></Outlined>
                     </View>
-                    <ButtonF style={styles.button}></ButtonF>
                 </ScrollView>
             </View>
             <Navigation />

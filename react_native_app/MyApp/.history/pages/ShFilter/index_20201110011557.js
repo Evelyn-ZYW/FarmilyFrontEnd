@@ -65,7 +65,7 @@ const ShFilter = () => {
                         <Outlined text="Pork"></Outlined>
                         <Outlined text="Sheep"></Outlined>
                     </View>
-                    <ButtonF style={styles.button}></ButtonF>
+                    <ButtonF></ButtonF>
                 </ScrollView>
             </View>
             <Navigation />
