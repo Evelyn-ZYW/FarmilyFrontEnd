@@ -19,6 +19,8 @@ import ShFilter from './pages/ShFilter';
 import Main1 from './pages/Main1';
 import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 // Rauqel's pages
 import ComfirmInfo from './pages/ComfirmInfo';
@@ -41,12 +43,15 @@ const App = () => {
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
-    {/* <OneDiscussion /> */}
+
     {/* <Profile/> */}
     <Favorite/>
     {/* <ComfirmInfo /> */}
     {/* <Notification/> */}
 
+//     <OneDiscussion />
+    {/*<Home />*/}
+    {/*<Login />*/}
 
   </View>
 }
