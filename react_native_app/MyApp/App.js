@@ -21,6 +21,7 @@ import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 // Rauqel's pages
 import ComfirmInfo from './pages/ComfirmInfo';
@@ -53,6 +54,7 @@ const App = () => {
     {/*<Home />*/}
     {/*<Login />*/}
 
+    {/*<SignUp /> */}
   </View>
 }
 
