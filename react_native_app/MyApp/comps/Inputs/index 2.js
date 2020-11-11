@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { TextInput, StyleSheet,Text } from "react-native";
 
-
-const UserTextInput = ({text, placeholder}) => {
+const UserTextInput = ({text}) => {
   const [value, onChangeText] = React.useState({text});
-
 
   return (
    
@@ -12,16 +10,14 @@ const UserTextInput = ({text, placeholder}) => {
       style={{
         height: 40,
         width: 272,
-        borderColor: "#DADADA",
+        borderColor: "gray",
         borderWidth: 1,
-        /*marginBottom:40,*/
-        padding:10
+        marginLeft: 20,
+        marginTop: 50
       }}
       onChangeText={(text) => onChangeText(text)}
       
       value={value}
-      placeholder={placeholder}
-      placeholderTextColor="#000000"
     />
   );
 };
@@ -33,6 +29,5 @@ const styles = StyleSheet.create({
 });
 UserTextInput.defaultProps = {
   text: "yes",
-  placeholder:"placeholder"
 };
 export default UserTextInput;

@@ -113,9 +113,8 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30
   },
-
-  hourContainer: {
-    backgroundColor: "#FFFFFF",
+hourContainer:{
+   backgroundColor: "#FFFFFF",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -127,8 +126,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
     shadowRadius: 1,  
     elevation: 3
-  },
-
+},
   time: {
     color: "#000000",
     fontWeight: "600",

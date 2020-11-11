@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { View, Text, StyleSheet,TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet,TouchableOpacity,TouchableHightlightImage,TouchableHighlight } from "react-native";
 
 const MyUnread = ({title,text}) => {
   const [count, setCount] = useState(0);
@@ -16,6 +16,7 @@ const MyUnread = ({title,text}) => {
       {/* <View style={styles.countContainer}>
         <Text>Count: {count}</Text>
       </View> */}
+
       <TouchableOpacity
         style={styles.button}
         onPress={onPress}
@@ -24,6 +25,7 @@ const MyUnread = ({title,text}) => {
       <Text style={styles.titletext}>
       {text}
       </Text>
+  
       </TouchableOpacity>
     </View>
   );
@@ -44,7 +46,10 @@ const styles = StyleSheet.create({
     // marginTop: 100,
     marginHorizontal: 50,
     // padding: 20,
-    opacity: 2,
+  
+    // backgroundColor:'transparent',
+    opacity: 0.6,
+    
    
   },
   title: {
@@ -60,7 +65,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     textAlign: "center",
     marginLeft: 15
-  }
+  },
+  // button:{
+  //      backgroundColor:'transparent',
+  //   opacity:0.8
+  // }
+  
 });
 MyUnread.defaultProps = {
   text: "Default text",

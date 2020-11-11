@@ -49,7 +49,11 @@ const App = () => {
 
     {/* <Profile/> */}
     {/* <Favorite/> */}
+
+
+
     {/* <ComfirmInfo /> */}
+
     {/* <Notification/> */}
 
 {/* //     <OneDiscussion /> */}
