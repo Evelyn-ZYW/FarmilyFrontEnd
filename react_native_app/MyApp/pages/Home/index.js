@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
-import ButtonF from '../../comps/ButtonF';
+import Button from '../../comps/Button';
 
 const styles = StyleSheet.create({
     homepage:{
@@ -38,9 +38,9 @@ const Home = ()=>{
         <View style={styles.homepage}>
             <Image source={require('./logo.png')} style={styles.logo} />
             <View style={styles.buttonContainer}>
-                <ButtonF text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} />
+                <Button text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} />
                 <Text style={styles.or}>OR</Text>
-                <ButtonF text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} />
+                <Button text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} />
                 <Text style={styles.asGuest} >As Guest</Text>
             </View>
         </View>
