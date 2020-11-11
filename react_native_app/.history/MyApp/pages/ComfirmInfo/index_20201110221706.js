@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 import MyComfirm from '../../comps/Comfirm';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
-import Button from '../../comps/Button'; 
+import ButtonF from '../../comps/ButtonF'; 
 
 const styles = StyleSheet.create({
     container: {
@@ -50,7 +50,7 @@ const ComfirmInfo = () => {
                 <MyComfirm>
                 </MyComfirm>
                 <View style={styles.button}>
-                <Button/>
+                <ButtonF/>
                 </View>
                 {/* </View> */}
                 {/* this input is for testing pages only -- end */}
@@ -67,7 +67,7 @@ const ComfirmInfo = () => {
         </View>
     );
 };
-Button.defaultProps= {
+ButtonF.defaultProps= {
     bgcolor: "#2775C9",
   text: "Comfirm"
   

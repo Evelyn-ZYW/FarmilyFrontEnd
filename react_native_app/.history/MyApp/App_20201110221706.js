@@ -30,8 +30,6 @@ import Profile from './pages/Profile';
 import Favorite from './pages/Favorite';
 import Notification from './pages/Notification';
 
-import ForgetP from './pages/ForgetP';
-import ResetP from './pages/ResetP';
 
 
 
@@ -42,23 +40,21 @@ const App = () => {
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
  
-    <ShFilter />
+    {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
 
     {/* <Profile/> */}
-    {/* <Favorite/> */}
+    <Favorite/>
     {/* <ComfirmInfo /> */}
     {/* <Notification/> */}
 
-{/* //     <OneDiscussion /> */}
+//     <OneDiscussion />
     {/*<Home />*/}
     {/*<Login />*/}
 
     {/*<SignUp /> */}
-    {/*<ForgetP />*/}
-    {/*<ResetP />*/}
   </View>
 }
 

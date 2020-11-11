@@ -30,8 +30,6 @@ import Profile from './pages/Profile';
 import Favorite from './pages/Favorite';
 import Notification from './pages/Notification';
 
-import ForgetP from './pages/ForgetP';
-import ResetP from './pages/ResetP';
 
 
 
@@ -57,8 +55,6 @@ const App = () => {
     {/*<Login />*/}
 
     {/*<SignUp /> */}
-    {/*<ForgetP />*/}
-    {/*<ResetP />*/}
   </View>
 }
 

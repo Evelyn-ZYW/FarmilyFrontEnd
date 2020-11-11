@@ -7,7 +7,7 @@ import LogoHeader from '../../comps/LogoHeader';
 import Navigation from '../../comps/Navigation';
 import Underlined from '../../comps/Underlined';
 import TradePost from '../../comps/TradePost';
-import Button from '../../comps/Button';
+import ButtonF from '../../comps/ButtonF';
 
 const styles = StyleSheet.create({
     container: {
@@ -81,7 +81,7 @@ const Main2 = () => {
                     </View>
                 </ScrollView>
 
-                <Button text="MORE" bgcolor="#00AC64" />
+                <ButtonF text="MORE" bgcolor="#00AC64" />
             </View>
 
             <View style={styles.row}>
