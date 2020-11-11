@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TextInput, StyleSheet,Text } from "react-native";
 
-const UserTextInput = ({text}) => {
+const UserTextInput = ({text,placeholder}) => {
   const [value, onChangeText] = React.useState({text});
 
   return (
@@ -18,6 +18,8 @@ const UserTextInput = ({text}) => {
       onChangeText={(text) => onChangeText(text)}
       
       value={value}
+      placeholder={placeholder}
+      placeholderTextColor="#0000000"
     />
   );
 };
@@ -29,5 +31,6 @@ const styles = StyleSheet.create({
 });
 UserTextInput.defaultProps = {
   text: "yes",
+  placeholder:"placeholder"
 };
 export default UserTextInput;
