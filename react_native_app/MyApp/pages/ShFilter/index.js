@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height
     },
     body: {
+
         alignItems: 'center',
         margin: 40
     },
@@ -37,23 +38,27 @@ const styles = StyleSheet.create({
     },
     cattle: {
         display: "flex",
+
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
         marginLeft: 40,
         marginRight: 40
+
     }
 });
 
 const ShFilter = () => {
     return (
         <View style={styles.container}>
+
             <Header
                 text="Slaughterhouse"
                 bottomColor="#2775C9"
             />
             <View style={{ height:500 }}>
                 <ScrollView style={styles.scroll}>
+
 
                     <View style={styles.body}>
                         <InputDate />
@@ -65,9 +70,11 @@ const ShFilter = () => {
                         <Outlined text="Pork"></Outlined>
                         <Outlined text="Sheep"></Outlined>
                     </View>
+
                     <ButtonF style={styles.button}></ButtonF>
                 </ScrollView>
             </View>
+
             <Navigation />
         </View>
     );

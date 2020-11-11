@@ -39,12 +39,15 @@ const styles = StyleSheet.create({
     // padding: 20
   },
   
+  
   title: {
+    fontFamily:"Josefin Sans",
     justifyContent: "center",
     alignItems:"center",
     marginBottom:10,
     fontSize: 30,
-    marginLeft: 55,
+    marginLeft: 55, 
+    fontWeight:"bold",
   },
   timeBox:{
     // display:"flex",
@@ -61,6 +64,8 @@ const styles = StyleSheet.create({
     // marginLeft: 60,
     marginBottom:10,
     marginHorizontal:110, 
+    fontWeight:"bold",
+    fontFamily:"Josefin Sans",
     // marginVertical:20,
 
 
@@ -69,6 +74,7 @@ const styles = StyleSheet.create({
   titletext:{
 
     fontSize: 20,
+    fontWeight:"bold",
     // justifyContent: "center",
     // alignItems:"center",
     // textAlign:"text-align",
@@ -78,6 +84,8 @@ const styles = StyleSheet.create({
   titletext2:{
 
     fontSize: 20,
+    fontFamily:"Josefin Sans",
+    fontWeight:"bold",
     // justifyContent: "center",
     // alignItems:"center",
     // textAlign:"text-align",
@@ -93,6 +101,7 @@ const styles = StyleSheet.create({
     maxHeight:20,
     maxWidth:35,
     resizeMode:"contain"
+
 },
 headIconC:{
     // left:30,
@@ -122,8 +131,8 @@ clockBox:{
 MyComfirm.defaultProps = {
   bigTitle:"Business Name",
   iconLeft:require("./close_big.png"),
-titletext:"2020/09/10",
-titletext2:"2020/09/10",
+titletext:"2020/09/10AM",
+titletext2:"2020/09/10AM",
 iconCalendar:require("./calendar_check.png"),
 iconWatch:require("./stopwatch.png"),
  

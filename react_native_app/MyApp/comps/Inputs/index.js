@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet } from "react-native";
+import { TextInput, StyleSheet,Text } from "react-native";
+
 
 const UserTextInput = ({text, placeholder}) => {
   const [value, onChangeText] = React.useState({text});
+
 
   return (
    
@@ -16,7 +18,7 @@ const UserTextInput = ({text, placeholder}) => {
         padding:10
       }}
       onChangeText={(text) => onChangeText(text)}
-
+      
       value={value}
       placeholder={placeholder}
       placeholderTextColor="#000000"
