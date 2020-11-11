@@ -20,6 +20,7 @@ import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
     <OneDiscussion />
     {/*<Home />*/}
     {/*<Login />*/}
+    {/*<SignUp /> */}
   </View>
 }
 
