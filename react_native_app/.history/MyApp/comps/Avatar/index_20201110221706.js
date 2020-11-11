@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
   text: {
     color: "#000000",
     fontSize: 20,
+    fontFamily: "Josefin Sans",
     fontWeight: "400"
   },
 
