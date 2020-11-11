@@ -1,0 +1,59 @@
+import React from 'react';
+import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+
+
+import LogoHeader from '../../comps/LogoHeader';
+import Navigation from '../../comps/Navigation';
+import MyTab from '../../comps/Tabs';
+import Avatar from '../../comps/Avatar';
+import UserTextInput from '../../comps/Inputs';
+
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        // justifyContent: 'center',
+    },
+    body: {
+        position: "absolute",
+        top: "15%",
+        // alignItems: 'center',
+    },
+    
+    logoheader:{
+        top:"10%",
+
+    },
+    
+  
+});
+
+const Profile = () => {
+    return (
+        <View style={styles.container}>
+           <LogoHeader
+           style={styles.logoheader}
+                logo={require("../../public/logo_h.png")}
+            />
+            <View style={styles.body}>
+           
+            <View style={styles.avatar}>
+            <Avatar/>
+            </View>
+            <View style={styles.tabs}>
+                <MyTab/>
+                <MyTab/>        
+                <MyTab/>
+                <MyTab/>
+                <MyTab/>
+                </View>
+            
+            </View>
+            <Navigation />
+        </View>
+    );
+};
+
+export default Profile;

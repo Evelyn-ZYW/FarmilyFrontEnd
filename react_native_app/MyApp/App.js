@@ -10,6 +10,7 @@ import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
 
+
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
 import MpBoard from './pages/MpBoard';
@@ -22,19 +23,37 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 
+// Rauqel's pages
+import ComfirmInfo from './pages/ComfirmInfo';
+import PopUp from './pages/Popup';
+import Profile from './pages/Profile';
+import Favorite from './pages/Favorite';
+import Notification from './pages/Notification';
+
+
+
 
 const App = () => {
   return <View style={styles.container}>
-    {/*<ForumBoard />*/}
+    {/* <ForumBoard /> */}
     {/*<MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
+ 
     {/* <ShFilter /> */}
+    {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
-    <OneDiscussion />
+
+    {/* <Profile/> */}
+    <Favorite/>
+    {/* <ComfirmInfo /> */}
+    {/* <Notification/> */}
+
+//     <OneDiscussion />
     {/*<Home />*/}
     {/*<Login />*/}
+
     {/*<SignUp /> */}
   </View>
 }

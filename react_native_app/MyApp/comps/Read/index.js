@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet,TouchableOpacity, Image } from "react-native";
 
-const MyUnread = ({title,text}) => {
+const Read = ({title,text}) => {
   const [count, setCount] = useState(0);
   const onPress = () => setCount(prevCount => prevCount + 1);
   
@@ -30,13 +30,13 @@ const MyUnread = ({title,text}) => {
 };
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#C97064",
+    backgroundColor: "#fff",
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     borderWidth: 3,
-    borderColor: "#fff",
+    borderColor: "#DADADA",
     width: 380,
     height: 100,
     justifyContent: "center",
@@ -62,8 +62,8 @@ const styles = StyleSheet.create({
     marginLeft: 15
   }
 });
-MyUnread.defaultProps = {
+Read.defaultProps = {
   text: "Default text",
   title: "Default",
 };
-export default MyUnread;
+export default Read;

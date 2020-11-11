@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 
   text: {
     color: "#000000",
-    fontSize: 22,
+    fontSize: 20,
     fontFamily: "Josefin Sans",
     fontWeight: "400"
   },
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
   profilePic: {
     display: "flex",
     borderRadius: 120,
-    width: 120,
-    height: 120,
+    width: 100,
+    height: 100,
     marginBottom: 30
   }
 });

@@ -3,7 +3,8 @@ import React from 'react';
 import { Text } from 'react-native';
 import Button from '../../comps/Button';
 import CenterView from './CenterView';
-import MyTab from "../../comps/Tabs";
+
+
 
 storiesOf('Custom Button', module)
 
@@ -16,4 +17,8 @@ storiesOf('Custom Button', module)
 
   .add('My Custom Tab', () => (
     <MyTab />
-  ));
+  ))
+
+  // .add('My Custom Tab2', () => (
+  //   <MyTab2 />
+  // ));
