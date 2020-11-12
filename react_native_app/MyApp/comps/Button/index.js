@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#FDB833",
+
     borderRadius: 20,
     margin: 20,
     alignContent: "center",
