@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
         top:"10%",
 
     },
+
+    Navi:{
+        position:"absolute",
+        top:698
+    },
     
   
 });
@@ -51,7 +56,7 @@ const Profile = () => {
                 </View>
             
             </View>
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

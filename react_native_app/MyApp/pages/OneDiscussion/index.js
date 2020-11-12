@@ -32,7 +32,11 @@ const styles = StyleSheet.create({
         maxWidth: 25,
         maxHeight: 25,
         margin: 10
-    }
+    },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const OneDiscussion = () => {
@@ -55,7 +59,7 @@ const OneDiscussion = () => {
                 </View>
             </ScrollView>
 
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

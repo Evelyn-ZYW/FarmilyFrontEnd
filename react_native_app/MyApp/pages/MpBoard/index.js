@@ -27,7 +27,11 @@ const styles = StyleSheet.create({
         maxWidth: 25,
         maxHeight: 25,
         margin: 10
-    }
+    },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const MpBoard = () => {
@@ -66,7 +70,7 @@ const MpBoard = () => {
                 />
 
             </View>
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

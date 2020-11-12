@@ -27,7 +27,11 @@ const styles = StyleSheet.create({
         maxWidth: 25,
         maxHeight: 25,
         margin: 10
-    }
+    },
+    MsgNavi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const MessageMain = () => {
@@ -70,7 +74,7 @@ const MessageMain = () => {
                     txt2="See you tomorrow!😎"
                 />
             </View>
-            <Navigation />
+            <View style={styles.MsgNavi}><Navigation /></View>
         </View>
     );
 };

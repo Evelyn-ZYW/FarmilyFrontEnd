@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:12,
         alignSelf:"flex-end",
-        marginTop:-20
     },
     loginInput:{
         marginTop:-15,
@@ -33,6 +32,9 @@ const styles = StyleSheet.create({
         color:"#2775C9",
         fontWeight:"bold",
         fontSize:15
+    },
+    loginInputBox:{
+        marginBottom:15
     }
 });
 
@@ -42,14 +44,14 @@ const Login = ()=>{
         <View style={styles.loginpage}>
             <Image source={require('./logo.png')} style={styles.logo} />
             <View style={styles.loginInput}>
-                    <UserTextInput placeholder="Username or Email Address"/>
-                    <UserTextInput placeholder="Password"/>
+                    <View style={styles.loginInputBox}><UserTextInput placeholder="Username or Email Address"/></View>
+                    <View style={styles.loginInputBox}><UserTextInput placeholder="Password"/></View>
                 <TouchableOpacity>
                     <Text style={styles.forgetP}>Forgot Password?</Text>
                 </TouchableOpacity>
             </View>
             <View style={styles.loginB}>
-                <Button style={styles.loginButton} text="LOGIN"/>
+                <Button style={styles.loginButton} text="LOGIN" bgcolor="#FDB833"/>
                 <TouchableOpacity>
                     <Text style={styles.loginBack}>BACK</Text>
                 </TouchableOpacity>
