@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { TextInput, StyleSheet,Text } from "react-native";
+import { TextInput, StyleSheet } from "react-native";
 
-const UserTextInput = ({text,placeholder}) => {
+const UserTextInput = ({text, placeholder}) => {
   const [value, onChangeText] = React.useState({text});
 
   return (
@@ -10,16 +10,15 @@ const UserTextInput = ({text,placeholder}) => {
       style={{
         height: 40,
         width: 272,
-        borderColor: "gray",
+        borderColor: "#DADADA",
         borderWidth: 1,
-        marginLeft: 20,
-        marginTop: 50
+        padding:10
       }}
       onChangeText={(text) => onChangeText(text)}
-      
+
       value={value}
       placeholder={placeholder}
-      placeholderTextColor="#0000000"
+      placeholderTextColor="#000000"
     />
   );
 };
