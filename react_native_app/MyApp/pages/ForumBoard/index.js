@@ -26,7 +26,11 @@ const styles = StyleSheet.create({
         maxWidth: 25,
         maxHeight: 25,
         margin: 10
-    }
+    },
+    Forum_Navi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const ForumBoard = () => {
@@ -67,7 +71,7 @@ const ForumBoard = () => {
                     txt2="We gonna celebrate"
                 /> */}
             </View>
-            <Navigation />
+            <View style={styles.Forum_Navi}><Navigation /></View>
         </View>
     );
 };

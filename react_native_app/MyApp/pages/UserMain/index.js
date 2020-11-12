@@ -149,7 +149,7 @@ export default function UserMain() {
           />
         </View>
       </View>
-      <Navigation />
+      <View style={styles.Navi}><Navigation /></View>
     </View>
   );
 }
@@ -197,4 +197,8 @@ const styles = StyleSheet.create({
     maxHeight: 25,
     marginLeft: "-5%"
   },
+  Navi:{
+    position:"absolute",
+    top:698
+},
 });

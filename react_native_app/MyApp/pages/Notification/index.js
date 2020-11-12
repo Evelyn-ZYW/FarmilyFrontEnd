@@ -25,7 +25,11 @@ const styles = StyleSheet.create({
     },
     unreadmsg:{
 
-    }
+    },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
     
 });
 
@@ -74,7 +78,7 @@ const Notification = () => {
                 
                
             </View>
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
             </View>
  
     );

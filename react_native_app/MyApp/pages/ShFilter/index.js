@@ -45,7 +45,11 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginRight: 40
 
-    }
+    },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const ShFilter = () => {
@@ -75,7 +79,7 @@ const ShFilter = () => {
                 </ScrollView>
             </View>
 
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

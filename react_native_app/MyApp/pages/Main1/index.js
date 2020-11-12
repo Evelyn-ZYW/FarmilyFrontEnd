@@ -46,6 +46,10 @@ const styles = StyleSheet.create({
         overflow: "hidden",
         borderColor: "#FDB833"
     },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
 });
 
 const Main1 = () => {
@@ -104,7 +108,7 @@ const Main1 = () => {
 
             </View>
 
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

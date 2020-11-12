@@ -37,9 +37,9 @@ import ShBusiness from './pages/ShBusiness';
 
 const App = () => {
   return <View style={styles.container}>
-    {/* <ForumBoard /> */}
-    {/*<MessageMain /> */}
-    {/* <MpBoard /> */}
+    {/*<ForumBoard />*/}
+    <MessageMain />
+    {/*<MpBoard />*/}
     {/* <ShMain /> */}
 
     {/* <ShFilter /> */}
@@ -56,9 +56,9 @@ const App = () => {
 
     {/* <Notification/> */}
 
-    <OneDiscussion />
+    {/*<OneDiscussion /> */}
     {/*<Home />*/}
-    <Login />
+    {/*<Login />*/}
 
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
