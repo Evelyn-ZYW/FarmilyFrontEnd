@@ -6,8 +6,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 
 const styles = StyleSheet.create({
   naviBox: {
-    position: "absolute",
-    bottom: 0,
+
     justifyContent: "space-around",
     alignItems: "center",
     flexDirection: "row",
@@ -15,14 +14,14 @@ const styles = StyleSheet.create({
     borderTopColor: "#E5E5E5",
     minWidth: "100%",
     backgroundColor:"white",
-    paddingLeft:15,
-    paddingRight:15,
+    paddingLeft:10,
+    paddingRight:30,
     paddingBottom: 15
     // zIndex: 2,
 
   },
   icons: {
-    width: 35,
+    width: 25,
     marginTop: "2%",
     resizeMode: "contain",
 

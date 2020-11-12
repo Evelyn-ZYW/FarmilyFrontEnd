@@ -32,7 +32,7 @@ import Notification from './pages/Notification';
 
 import ForgetP from './pages/ForgetP';
 import ResetP from './pages/ResetP';
-
+import ShBusiness from './pages/ShBusiness';
 
 
 const App = () => {
@@ -63,6 +63,7 @@ const App = () => {
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}
+    {/*<ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/>*/}
   </View>
 }
 
