@@ -22,6 +22,9 @@ import OneDiscussion from './pages/OneDiscussion';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import ForgetP from './pages/ForgetP';
+import ResetP from './pages/ResetP';
+import ShBusiness from './pages/ShBusiness';
 
 // Rauqel's pages
 import ComfirmInfo from './pages/ComfirmInfo';
@@ -29,37 +32,37 @@ import PopUp from './pages/Popup';
 import Profile from './pages/Profile';
 import Favorite from './pages/Favorite';
 import Notification from './pages/Notification';
+import MpDiscussion from './pages/MpDiscussion';
+import PostDiscussion from './pages/PostDiscussion';
 
-import ForgetP from './pages/ForgetP';
-import ResetP from './pages/ResetP';
-import ShBusiness from './pages/ShBusiness';
+
+
+
+
+
+
+
 
 
 const App = () => {
   return <View style={styles.container}>
-    {/*<ForumBoard />*/}
-    <MessageMain />
-    {/*<MpBoard />*/}
+    {/* <ForumBoard /> */}
+    {/* <MessageMain /> */}
+    {/* <MpBoard /> */}
     {/* <ShMain /> */}
-
     {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
-
     {/* <Profile/> */}
     {/* <Favorite/> */}
-
-
-
     {/* <ComfirmInfo /> */}
-
     {/* <Notification/> */}
-
-    {/*<OneDiscussion /> */}
+    {/* <OneDiscussion /> */}
+        {/* <MpDiscussion /> */}
+        <PostDiscussion />
     {/*<Home />*/}
-    {/*<Login />*/}
-
+    {/* <Login /> */}
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}

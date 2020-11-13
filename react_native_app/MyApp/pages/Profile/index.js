@@ -27,12 +27,15 @@ const styles = StyleSheet.create({
 
     },
 
+
+    tabs:{
+        alignItems:"flex-start",
+    }, 
     Navi:{
         position:"absolute",
         top:698
     },
-    
-  
+
 });
 
 const Profile = () => {
@@ -48,11 +51,22 @@ const Profile = () => {
             <Avatar/>
             </View>
             <View style={styles.tabs}>
-                <MyTab/>
-                <MyTab/>        
-                <MyTab/>
-                <MyTab/>
-                <MyTab/>
+                <MyTab
+                text="View Profile"
+           
+                />
+                <MyTab
+                 text="My discussion"
+                />        
+                <MyTab
+                text="My Market"
+                />
+                <MyTab
+                text="Settings"
+                />
+                <MyTab
+                 text="Logout"
+                />
                 </View>
             
             </View>
