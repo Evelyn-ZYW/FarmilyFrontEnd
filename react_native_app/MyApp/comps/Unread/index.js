@@ -20,6 +20,8 @@ const MyUnread = ({title,text}) => {
       <TouchableOpacity
         style={styles.button}
         onPress={onPress}
+        activeOpacity={0.3}
+        underlayColor="#FFFFF"
       >
        <Text style={styles.title}>{title}</Text>
       <Text style={styles.titletext}>
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
     // padding: 20,
   
     // backgroundColor:'transparent',
-    opacity: 0.6,
+    // opacity: 0.6,
     
    
   },
@@ -66,10 +68,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginLeft: 15
   },
-  // button:{
-  //      backgroundColor:'transparent',
-  //   opacity:0.8
-  // }
+  button:{
+      //  backgroundColor:'transparent',
+    opacity:1
+  }
   
 });
 MyUnread.defaultProps = {

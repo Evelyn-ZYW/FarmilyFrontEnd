@@ -19,6 +19,10 @@ const styles = StyleSheet.create({
         
             //  maxHeight:"100%"
     },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
 //     contentContainer: {
 //         // alignItems: 'center',
 //         position: "absolute",
@@ -57,7 +61,7 @@ const Favorite = () => {
     
             </View>
        
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
 
     );

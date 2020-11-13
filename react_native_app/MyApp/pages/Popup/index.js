@@ -21,6 +21,10 @@ const styles = StyleSheet.create({
         // alignItems: "center"
         justifyContent: "center"
     },
+    Navi:{
+        position:"absolute",
+        top:698
+    },
     // icon: {
     //     // resizeMode: "contain",
     //     // maxWidth: 25,
@@ -54,7 +58,7 @@ const PopUp = () => {
                     txt2="We gonna celebrate"
                 /> */}
             </View>
-            <Navigation />
+            <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };

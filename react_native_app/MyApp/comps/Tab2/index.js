@@ -5,7 +5,8 @@ import PostBodyD from '../../comps/PostBodyD';
 
 const MyTab2 = ({iconExpand, text,dropdown}) => {
   const [isdrop, setDrop] = useState(false);
-
+  const [bordercolor, setBdColor] = useState("#DADADA");
+  const bcolor = { borderColor: bordercolor ? bordercolor : "#DADADA" };
   const hourCont = {display: isdrop ? "flex" : "none"}
   useEffect(()=>{
     setDrop(dropdown);
@@ -13,7 +14,10 @@ const MyTab2 = ({iconExpand, text,dropdown}) => {
 
   return (
     
-    <View style={styles.container}>
+    <View style={[styles.container, bcolor]}
+    onTouchStart={() => { setBdColor("#C97064"); }}
+    onTouchEnd={() => { setBdColor("#DADADA"); }}
+    >
 <View style={styles.timeContainer}>
       {/* <Text style={styles.title}>{text}</Text> */}
       <TouchableOpacity style={styles.hourCont} 
@@ -46,14 +50,16 @@ const styles = StyleSheet.create({
     // borderTopRightRadius: 10,
     // borderBottomLeftRadius: 10,
     // borderBottomRightRadius: 10,
-    borderWidth: 1,
-    borderTopColor:"#DADADA",
-    borderBottomColor:"#DADADA",
-    borderRightColor:"#fff",
-    borderLeftColor:"#fff",
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+
+    // borderTopColor:"#DADADA",
+    // borderBottomColor:"#DADADA",
+    // borderRightColor:"#fff",
+    // borderLeftColor:"#fff",
     // borderColor: "#2775C9",
     width:400,
-    maxHeight: 84,
+    maxHeight: "100%",
     // justifyContent: "center",
     // marginVertical: 8,
     // marginTop: 100,

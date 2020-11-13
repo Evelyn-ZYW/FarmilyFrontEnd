@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
        right:"30%"
     },
     unreadmsg:{
+        opacity:0.6
 
     },
     Navi:{
