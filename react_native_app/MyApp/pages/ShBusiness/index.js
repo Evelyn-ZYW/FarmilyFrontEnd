@@ -8,7 +8,7 @@ import ShBusinessComp from '../../comps/ShBusinessComp';
 import InputTime from '../../comps/InputTime';
 import Navigation from '../../comps/Navigation';
 import Button from '../../comps/Button';
-//import InputDate from '../../comps/InputDate';
+import InputDate from '../../comps/InputDate';
 
 
 const styles = StyleSheet.create({
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
     ShBCont: {
         position: "absolute",
-        maxHeight:"85%",
+        maxHeight:"50%",
         width:"100%",
         top:80
     },
@@ -55,7 +55,13 @@ const styles = StyleSheet.create({
     ShBButton:{
         width:220,
         justifyContent:"center",
-        alignSelf:"center"
+        alignSelf:"center",
+        marginBottom:300
+    },
+    ShB_date:{
+        width:300,
+        alignSelf:"center",
+        marginTop:30
     }
 });
 
@@ -75,7 +81,7 @@ const ShBusiness = ({ShTag,ShDescrip}) =>{
                     <Text style={styles.ShB_Descrip}>{ShDescrip}</Text>
                     <View style={styles.ShB_Map}></View>
                     <View>
-                        {/*<InputDate />*/}
+                        <View style={styles.ShB_date}><InputDate /></View>
                         <View style={styles.ShB_time}><InputTime /></View>
                     </View>
                     <View style={styles.ShBButton}><Button text="BOOKING" bgcolor="#2775C9"  /></View>
