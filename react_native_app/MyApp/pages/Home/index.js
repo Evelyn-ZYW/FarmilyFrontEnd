@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 import Button from '../../comps/Button';
 
 const styles = StyleSheet.create({
@@ -41,7 +41,9 @@ const Home = ()=>{
                 <Button text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} />
                 <Text style={styles.or}>OR</Text>
                 <Button text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} />
-                <Text style={styles.asGuest} >As Guest</Text>
+                <TouchableOpacity>
+                    <Text style={styles.asGuest} >As Guest</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );

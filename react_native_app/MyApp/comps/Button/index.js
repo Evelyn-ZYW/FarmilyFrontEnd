@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     shadowColor: "#000000",
     shadowOffset: { width: 0, height: 5.5 },
-    shadowOpacity: 0.7
+    //shadowOpacity: 0.7
   },
   buttontext: {
     color: "#FFFFFF",
@@ -21,13 +21,22 @@ const styles = StyleSheet.create({
 
 const Button = ({ bgcolor, text }) => {
 
+  const [onpress, setPress] = useState(0.7);
+
+  const pressB = {shadowOpacity:onpress?0.7:0}
+
+  const position = {bottom:onpress?0:-3}
 
   return (
-    <TouchableOpacity > 
-        <View style={styles.container} backgroundColor={bgcolor}>
+
+      <View style={[styles.container, pressB, position]} backgroundColor={bgcolor}
+        onTouchStart={()=>{setPress(0)}}
+        onTouchEnd={()=>{setPress(0.7)}}
+      >
           <Text style={styles.buttontext}>{text}</Text>
         </View>
-    </TouchableOpacity>
+
+    
   );
 };
 

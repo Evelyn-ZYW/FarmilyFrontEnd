@@ -60,13 +60,13 @@ const App = () => {
     {/* <Notification/> */}
     {/* <OneDiscussion /> */}
         {/* <MpDiscussion /> */}
-        <PostDiscussion />
+        {/*<PostDiscussion />*/}
     {/*<Home />*/}
     {/* <Login /> */}
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}
-    {/*<ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/>*/}
+    <ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/>
   </View>
 }
 
