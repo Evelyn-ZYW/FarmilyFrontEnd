@@ -9,7 +9,7 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
-import {NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
@@ -36,12 +36,12 @@ import MpDiscussion from './pages/MpDiscussion';
 import PostDiscussion from './pages/PostDiscussion';
 import AuthNavigator from './AuthNavigation/AuthNavigator';
 
-{/* <View style={styles.container}>
+{/* <View style={styles.container}> */}
     {/* <ForumBoard /> */}
     {/* <MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
-    <ShFilter />
+    {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
@@ -50,22 +50,20 @@ import AuthNavigator from './AuthNavigation/AuthNavigator';
     {/* <ComfirmInfo /> */}
     {/* <Notification/> */}
     {/* <OneDiscussion /> */}
-        {/* <MpDiscussion /> */}
-        {/*<PostDiscussion />*/}
+    {/* <MpDiscussion /> */}
+    {/*<PostDiscussion />*/}
     {/*<Home />*/}
     {/* <Login /> */}
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}
-
-
+  // </View>
 
 
 const App = () => {
   return <NavigationContainer>
     <AuthNavigator/>
   </NavigationContainer>
-
 }
 
 const styles = StyleSheet.create({
