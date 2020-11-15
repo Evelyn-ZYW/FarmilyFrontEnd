@@ -39,7 +39,12 @@ const styles = StyleSheet.create({
 });
 
 
-const Login = ()=>{
+const Login = ({navigation, })=>{
+    const handleHome = () =>{
+        navigation.navigate("Home")
+    }
+
+
     return(
         <View style={styles.loginpage}>
             <Image source={require('./logo.png')} style={styles.logo} />
@@ -52,7 +57,7 @@ const Login = ()=>{
             </View>
             <View style={styles.loginB}>
                 <Button style={styles.loginButton} text="LOGIN" bgcolor="#FDB833"/>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleHome} >
                     <Text style={styles.loginBack}>BACK</Text>
                 </TouchableOpacity>
             </View>
