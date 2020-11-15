@@ -59,17 +59,23 @@ const styles = StyleSheet.create({
     },
     underText: {
         fontWeight: "bold",
-        color: "#000000",
-        fontSize: 24
+        // color: "#000000",
+        fontSize: 24,
 
     },
+    border: {
+        // borderBottomWidth: 3,
+        // borderColor: "#000"
+    }
 })
 
 const FilterButton = ({ type, text, setFilter, setCurrentSelection }) => {
 
+
     return (
-        <TouchableOpacity onPress={() => { setFilter(type); setCurrentSelection(type); }}>
-            <View >
+        <TouchableOpacity
+        onPress={() => { setFilter(type); setCurrentSelection(type); }}>
+            <View>
                 <Text style={styles.underText}>{text}</Text>
             </View>
         </TouchableOpacity>

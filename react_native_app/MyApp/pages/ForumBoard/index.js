@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     Forum_Navi: {
         position: "absolute",
-        top: 698
+        bottom: 0
     },
 });
 
