@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         maxHeight:"100%",
         width:"100%",
-        marginTop: 120
+        marginTop: 130
     },
     button: {
         width:100,

@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
         width:100
     },
     inputD: {
-        width: 300,
+        width: 250,
         alignSelf: "center",
         marginBottom: 10
     },
     inputL: {
-        width: 300,
+        width: 250,
         alignSelf: "center"
     },
     optionCont: {
