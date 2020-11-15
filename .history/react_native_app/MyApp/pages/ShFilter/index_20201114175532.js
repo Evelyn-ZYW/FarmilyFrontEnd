@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 
 
 import InputDate from '../../comps/InputDate';
-import InputLocation from '../../comps/InputLocation';
+import InputLocation from '../../comps/InputTime';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import Outlined from '../../comps/Outlined';
@@ -40,12 +40,12 @@ const styles = StyleSheet.create({
         width:100
     },
     inputD: {
-        width: 300,
+        width: 250,
         alignSelf: "center",
         marginBottom: 10
     },
     inputL: {
-        width: 300,
+        width: 250,
         alignSelf: "center"
     },
     optionCont: {
@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     fourOptionsCont: {
-        marginTop: 10,
         marginBottom: 20
     }
 });

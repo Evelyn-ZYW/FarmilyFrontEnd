@@ -9,7 +9,7 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
-import {NavigationContainer} from '@react-navigation/native';
+
 
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
@@ -34,9 +34,18 @@ import Favorite from './pages/Favorite';
 import Notification from './pages/Notification';
 import MpDiscussion from './pages/MpDiscussion';
 import PostDiscussion from './pages/PostDiscussion';
-import AuthNavigator from './AuthNavigation/AuthNavigator';
 
-{/* <View style={styles.container}>
+
+
+
+
+
+
+
+
+
+const App = () => {
+  return <View style={styles.container}>
     {/* <ForumBoard /> */}
     {/* <MessageMain /> */}
     {/* <MpBoard /> */}
@@ -57,15 +66,8 @@ import AuthNavigator from './AuthNavigation/AuthNavigator';
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}
-
-
-
-
-const App = () => {
-  return <NavigationContainer>
-    <AuthNavigator/>
-  </NavigationContainer>
-
+    {/* <ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/> */}
+  </View>
 }
 
 const styles = StyleSheet.create({
@@ -79,5 +81,5 @@ const styles = StyleSheet.create({
   }
 })
 
-export default App;
-// export { default } from './storybook';
+// export default App;
+export { default } from './storybook';

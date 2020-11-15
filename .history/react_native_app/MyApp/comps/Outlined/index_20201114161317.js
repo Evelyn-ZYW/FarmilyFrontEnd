@@ -5,10 +5,8 @@ const styles = StyleSheet.create({
     outerline:{
         borderRadius:10,
         borderWidth:3,
-        borderColor:"#DADADA",
         alignItems: "center",
-        minHeight:80,
-        justifyContent:"center"
+        margin:10
     },
     insidetext:{
         color:"#000000",
