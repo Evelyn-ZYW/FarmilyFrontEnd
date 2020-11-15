@@ -2,11 +2,11 @@ import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 
 
-import DiscussionHeading from '../../comps/DiscussionHeading';
-import PostBodyD from '../../comps/PostBodyD';
-import Comment from '../../comps/Comment';
+import MarketHeading from '../../comps/MarketHeading';
+import PostBodyM from '../../comps/PostBodyM';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
+import Button from '../../comps/Button';
 
 const styles = StyleSheet.create({
     container: {
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
         top: "14%",
         // alignItems: 'center',
         // borderWidth:3,
-        maxHeight: "65%"
+        maxHeight: "100%"
     },
     row: {
         flexDirection: "row",
@@ -39,29 +39,28 @@ const styles = StyleSheet.create({
     },
 });
 
-const OneDiscussion = () => {
+const OneMarket = () => {
     return (
         <View style={styles.container}>
             <Header
-                text="Discussion"
+                text="Market Place"
                 iconRight={require('../../public/heart.png')}
                 iconLeft={require('../../public/back.png')}
-                bottomColor="#FDB833"
+                bottomColor="#00AC64"
             />
             <ScrollView style={styles.contentContainer}>
                 <View>
-                    <DiscussionHeading />
-                    <PostBodyD />
-                    <Comment />
-                    <Comment followUp={require("../../public/follow_up.png")} />
-                    <Comment followUp={require("../../public/follow_up.png")} />
-                    <Comment followUp={require("../../public/follow_up.png")} />
+                    <MarketHeading />
+                    <PostBodyM />
                 </View>
+                <Button
+                text="Contact the Seller" 
+                bgcolor="#00AC64"
+                />
             </ScrollView>
-
             <View style={styles.Navi}><Navigation /></View>
         </View>
     );
 };
 
-export default OneDiscussion;
+export default OneMarket;
