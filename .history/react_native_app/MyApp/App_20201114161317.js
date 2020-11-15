@@ -50,7 +50,7 @@ const App = () => {
     {/* <MessageMain /> */}
     {/* <MpBoard /> */}
     {/* <ShMain /> */}
-    <ShFilter />
+    {/* <ShFilter /> */}
     {/* <PopUp /> */}
     {/* <Main1 /> */}
     {/* <Main2 /> */}
@@ -66,7 +66,7 @@ const App = () => {
     {/*<SignUp /> */}
     {/*<ForgetP />*/}
     {/* <ResetP /> */}
-    {/* <ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/> */}
+    <ShBusiness ShTag="#Red Meat" ShDescrip="Default Slaughterhouse Business Descriptions. Farmily Default Slaughterhouse Business Descriptions. Farmily slaughterhouse. Farmily slaurghterhouse"/>
   </View>
 }
 

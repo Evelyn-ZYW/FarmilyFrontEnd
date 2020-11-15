@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 
 
 import InputDate from '../../comps/InputDate';
-import InputLocation from '../../comps/InputLocation';
+import InputTime from '../../comps/InputTime';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import Outlined from '../../comps/Outlined';
@@ -12,7 +12,9 @@ import style from '../../storybook/stories/CenterView/style';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     icon: {
         resizeMode: "contain",
@@ -21,13 +23,10 @@ const styles = StyleSheet.create({
         margin: 10
     },
     scroll: {
-        position: "absolute",
-        maxHeight:"100%",
-        width:"100%",
-        marginTop: 120
+        maxHeight: "100%"
     },
     button: {
-        width:100,
+        width:212,
         justifyContent: "center",
         alignSelf: "center"
     },
@@ -37,54 +36,47 @@ const styles = StyleSheet.create({
     },
     filterOption: {
         margin:20,
-        width:100
+        width:100,
+        height: 100
     },
     inputD: {
-        width: 300,
-        alignSelf: "center",
-        marginBottom: 10
+        width: 250,
+        alignSelf: "center"
     },
-    inputL: {
-        width: 300,
+    inputT: {
+        width: 250,
         alignSelf: "center"
     },
     optionCont: {
         display:"flex",
-        flexDirection:"row",
-        justifyContent: "center"
-    },
-    fourOptionsCont: {
-        marginTop: 10,
-        marginBottom: 20
+        flexDirection:"row"
     }
 });
 
 const ShFilter = () => {
     return (
         <View style={styles.container}>
-            <View>
+
             <Header
                 text="Slaughterhouse"
                 bottomColor="#2775C9"
             />
-            </View>
-            <View style={{}}>
+            <View style={{ height:500 }}>
                 <ScrollView style={styles.scroll}>
-                    <View style={styles.inputL}><InputLocation /></View>
                     <View style={styles.inputD}><InputDate /></View>
+                    <View style={styles.inputT}><InputDate /></View>
 
-                    <View style={styles.fourOptionsCont}>
-                        <View style={styles.optionCont}>
-                            <View style={styles.filterOption}><Outlined text="Red Meat"></Outlined></View>
-                            <View style={styles.filterOption}><Outlined text="Poultry"></Outlined></View>
-                        </View>                    
-                        <View style={styles.optionCont}>
-                            <View style={styles.filterOption}><Outlined text="Pork"></Outlined></View>
-                            <View style={styles.filterOption}><Outlined text="Sheep"></Outlined></View>
-                        </View>
+                    <View style={styles.optionCont}>
+                        <View style={styles.filterOption}><Outlined text="Red Meat"></Outlined></View>
+                        <View style={styles.filterOption}><Outlined text="Poultry"></Outlined></View>
+                    </View>
+                    
+                    <View style={styles.optionCont}>
+                        <View style={styles.filterOption}><Outlined text="Pork"></Outlined></View>
+                        <View style={styles.filterOption}><Outlined text="Sheep"></Outlined></View>
                     </View>
 
-                    <View style={style.button}><Button text="Search"></Button></View>
+                    <View style={style.button}><Button></Button></View>
                 </ScrollView>
             </View>
 
