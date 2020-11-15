@@ -40,6 +40,9 @@ const Home = ({navigation})=>{
     const handleSignup = () =>{
         navigation.navigate("Signup")
     }
+    const handleMain = () =>{
+        navigation.navigate("Main")
+    }
     return(
         <View style={styles.homepage}>
             <Image source={require('./logo.png')} style={styles.logo} />
@@ -47,7 +50,7 @@ const Home = ({navigation})=>{
                 <Button text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} handler={handleLogin} />
                 <Text style={styles.or}>OR</Text>
                 <Button text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} handler={handleSignup}/>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleMain}>
                     <Text style={styles.asGuest} >As Guest</Text>
                 </TouchableOpacity>
             </View>

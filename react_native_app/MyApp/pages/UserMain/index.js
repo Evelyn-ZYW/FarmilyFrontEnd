@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, ScrollView, StyleSheet } from 'react-native';
+import { View, Image, ScrollView, StyleSheet,Text } from 'react-native';
 import ForumPost from '../../comps/ForumPost';
 import LogoHeader from '../../comps/LogoHeader';
 import Navigation from '../../comps/Navigation';
@@ -64,11 +64,11 @@ const filterPost = {
 
 const postType = Object.keys(filterPost);
 
-export default function UserMain() {
+export default function UserMain({navigation}) {
   //no use for now
   const [isReady, setReady] = useState(false);
 
-
+  const [currentSelection,setCurrentSelection ] = useState("discusstion");
   const [post, setPost] = useState([]); //empty array for re-render
 
   const [filter, setFilter] = useState('Discussion'); // initial state is Discussion
@@ -90,7 +90,7 @@ export default function UserMain() {
 
   const filterButton = postType.map((type) => {
 
-    return <FilterButton key={type} text={type} type={type} setFilter={setFilter} />
+    return <FilterButton key={type} text={type} type={type} setFilter={setFilter} setCurrentSelection={setCurrentSelection} />
 
   });
 
@@ -135,12 +135,11 @@ export default function UserMain() {
       <LogoHeader logo={require("../../public/logo_h.png")} />
       <View style={styles.body}>
         <View style={styles.filterGroup}>{filterButton}</View>
-        <ScrollView style={styles.allPostBody}>{postGroup}</ScrollView>
-        <Button text="MORE" />
-
+        <ScrollView style={filter == "Discussion" ? styles.allPostBody : styles.allPostBody2}>{postGroup}</ScrollView>
+        {filter == "Discussion" ? <Button text="MORE" bgcolor="#FDB833" width="70%"/>: <Button text="MORE" bgcolor="#00AC64" width="70%" />}
         <View style={{ minWidth: '100%', alignItems: 'center', flexDirection: 'row' }}>
           <Underlined
-            text="Slaughterhouses"
+            text="Slaughterhouses"   
           // bottomWidth={null}
           />
           <Image
@@ -191,6 +190,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     maxHeight: '50%',
   },
+  allPostBody2:{
+    marginTop: 20,
+    borderColor: "#00AC64",
+    borderWidth: 3,
+    width: '90%',
+    borderRadius: 10,
+    maxHeight: '50%',
+  },
   icon: {
     resizeMode: 'contain',
     maxWidth: 25,
@@ -201,4 +208,7 @@ const styles = StyleSheet.create({
     position:"absolute",
     top:698
 },
+useMainB:{
+  width:212
+}
 });
