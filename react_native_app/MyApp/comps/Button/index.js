@@ -3,13 +3,13 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
   container: {
-
     borderRadius: 20,
     margin: 20,
     alignContent: "center",
     shadowColor: "#000000",
     shadowOffset: { width: 0, height: 5.5 },
     //shadowOpacity: 0.7
+
   },
   buttontext: {
     color: "#FFFFFF",
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const Button = ({ bgcolor, text, handler }) => {
+const Button = ({ bgcolor, text, handler , width}) => {
 
   const [onpress, setPress] = useState(0.7);
 
@@ -28,7 +28,7 @@ const Button = ({ bgcolor, text, handler }) => {
   const position = {bottom:onpress?0:-3}
 
   return (
-    <TouchableOpacity onPress={handler}>
+    <TouchableOpacity onPress={handler} style={{width:width}}>
 
       <View style={[styles.container, pressB, position]} backgroundColor={bgcolor}
               onTouchStart={()=>{setPress(0)}}
@@ -44,7 +44,8 @@ const Button = ({ bgcolor, text, handler }) => {
 
 Button.defaultProps = {
   bgcolor: "#FDB833",
-  text: "Default"
+  text: "Default",
+
 };
 
 export default Button;
