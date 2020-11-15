@@ -36,7 +36,10 @@ const styles = StyleSheet.create({
 });
 
 
-const SignUp = ()=>{
+const SignUp = ({navigation})=>{
+    const handleHome = () =>{
+        navigation.navigate("Home")
+    }
     return(
         <View style={styles.signuppage}>
             <Image source={require('./logoV.png')} style={styles.logoV} />
@@ -65,7 +68,7 @@ const SignUp = ()=>{
             <View style={styles.signupB}>
                 <Button bgcolor="#00AC64" text="SIGN UP"/>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleHome}>
                 <Text style={styles.signupBack}>BACK</Text>
             </TouchableOpacity>
         </View>

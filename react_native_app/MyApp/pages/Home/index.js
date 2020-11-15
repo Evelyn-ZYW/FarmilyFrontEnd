@@ -33,14 +33,20 @@ const styles = StyleSheet.create({
 });
 
 
-const Home = ()=>{
+const Home = ({navigation})=>{
+    const handleLogin = () =>{
+        navigation.navigate("Login")
+    }
+    const handleSignup = () =>{
+        navigation.navigate("Signup")
+    }
     return(
         <View style={styles.homepage}>
             <Image source={require('./logo.png')} style={styles.logo} />
             <View style={styles.buttonContainer}>
-                <Button text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} />
+                <Button text="LOGIN" bgcolor="#FDB833" style={styles.homeButton} handler={handleLogin} />
                 <Text style={styles.or}>OR</Text>
-                <Button text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} />
+                <Button text="SIGN UP" bgcolor="#00AC64" style={styles.homeButton} handler={handleSignup}/>
                 <TouchableOpacity>
                     <Text style={styles.asGuest} >As Guest</Text>
                 </TouchableOpacity>

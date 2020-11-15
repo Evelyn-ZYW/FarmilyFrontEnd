@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const Button = ({ bgcolor, text }) => {
+const Button = ({ bgcolor, text, handler }) => {
 
   const [onpress, setPress] = useState(0.7);
 
@@ -28,13 +28,15 @@ const Button = ({ bgcolor, text }) => {
   const position = {bottom:onpress?0:-3}
 
   return (
+    <TouchableOpacity onPress={handler}>
 
       <View style={[styles.container, pressB, position]} backgroundColor={bgcolor}
-        onTouchStart={()=>{setPress(0)}}
-        onTouchEnd={()=>{setPress(0.7)}}
-      >
-          <Text style={styles.buttontext}>{text}</Text>
-        </View>
+              onTouchStart={()=>{setPress(0)}}
+              onTouchEnd={()=>{setPress(0.7)}}
+            >
+                <Text style={styles.buttontext}>{text}</Text>
+              </View>
+    </TouchableOpacity>
 
     
   );
