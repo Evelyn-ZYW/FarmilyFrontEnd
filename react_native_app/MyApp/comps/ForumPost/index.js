@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import style from '../../storybook/stories/CenterView/style';
+import Navigation from '../Navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -53,60 +54,66 @@ const styles = StyleSheet.create({
     }
 })
 
-const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize, imagePath }) => {
+const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize, imagePath, icon1, icon2, icon3, icon4, maxheight }) => {
 
     const [bordercolor, setBdColor] = useState("#E5E5E5");
 
     const subject = { fontSize: fontsize ? fontsize : 22 };
     const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
+    const height = { maxHeight: maxheight ? maxheight : 150 }
 
-    return <View style={[styles.container, styles.cont, bcolor]}
-        onTouchStart={() => { setBdColor("#FDB833"); }}
-        onTouchEnd={() => { setBdColor("#E5E5E5"); }}
-    >
-        <View style={styles.row}>
-            <View style={styles.texts}>
-                <Text
-                    style={[styles.cont, subject]}
-                >{txt1}</Text>
-                <Text>{txt2}</Text>
+
+
+    return <TouchableOpacity>
+        <View style={[styles.container, styles.cont, bcolor, height]}
+            onTouchStart={() => { setBdColor("#FDB833"); }}
+            onTouchEnd={() => { setBdColor("#E5E5E5"); }}
+        >
+            <View style={styles.row}>
+                <View style={styles.texts}>
+                    <Text
+                        style={[styles.cont, subject]}
+                    >{txt1}</Text>
+                    <Text>{txt2}</Text>
+                </View>
+
+                <Image
+                    style={styles.photo}
+                    source={imagePath ? imagePath : require('../../public/dogs.png')}
+                />
             </View>
 
-            <Image
-                style={styles.photo}
-                source={imagePath ? imagePath : require('../../public/dogs.png')}
-            />
+            <View style={styles.actions}>
+                <View style={styles.brcorner1}>
+                    <Image
+                        style={styles.icon}
+                        source={icon1}
+                    />
+                    <Text
+                        style={styles.smtxt}
+                    >{txt3}</Text>
+                    <Image
+                        style={styles.icon}
+                        source={icon2}
+                    />
+                    <Text
+                        style={styles.smtxt}
+                    >{txt4}</Text>
+                </View>
+                <View style={styles.brcorner2}>
+                    <Image
+                        style={styles.icon}
+                        source={icon3}
+                    />
+                    <Image
+                        style={styles.icon}
+                        source={icon4}
+                    />
+                </View>
+            </View>
         </View>
+    </TouchableOpacity>
 
-        <View style={styles.actions}>
-            <View style={styles.brcorner1}>
-                <Image
-                    style={styles.icon}
-                    source={require('../../public/heart.png')}
-                />
-                <Text
-                    style={styles.smtxt}
-                >{txt3}</Text>
-                <Image
-                    style={styles.icon}
-                    source={require('../../public/msg3.png')}
-                />
-                <Text
-                    style={styles.smtxt}
-                >{txt4}</Text>
-            </View>
-            <View style={styles.brcorner2}>
-                <Image
-                    style={styles.icon}
-                    source={require('../../public/share.png')}
-                />
-                <Image
-                    style={styles.icon}
-                    source={require('../../public/more.png')}
-                />
-            </View>
-        </View>
-    </View>
 }
 
 ForumPost.defaultProps = {
@@ -114,6 +121,10 @@ ForumPost.defaultProps = {
     txt2: "Look at my cute dogs. Even if you are a cat person you are gonna love my dog...",
     txt3: "1.2k",
     txt4: "1.8k",
+    icon1: require("../../public/heart.png"),
+    icon2: require("../../public/eye.png"),
+    icon3: require("../../public/share.png"),
+    icon4: require("../../public/more.png"),
     fontSize: 50
 }
 export default ForumPost;

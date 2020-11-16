@@ -132,5 +132,6 @@ TradePost.defaultProps = {
     icon3: require("../../public/share.png"),
     icon4: require("../../public/more.png"),
     maxHeight: 150,
+    bcolor: "#FDB833"
 }
 export default TradePost;

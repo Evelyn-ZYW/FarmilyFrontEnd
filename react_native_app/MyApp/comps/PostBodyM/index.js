@@ -37,12 +37,6 @@ const PostBodyM = ({ txt1 }) => {
                 <Text style={styles.text} >{txt1}</Text>
                 <ImageGallery />
             </View>
-            <View style={styles.row}>
-                <Button
-                text="Contact the Seller" 
-                bgcolor="#00AC64"
-                />
-            </View>
         </View>
     );
 };
