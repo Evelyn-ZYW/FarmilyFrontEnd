@@ -60,7 +60,7 @@ const ForumPost = ({ txt1, txt2, txt3, txt4, fontsize, imagePath, icon1, icon2, 
 
     const subject = { fontSize: fontsize ? fontsize : 22 };
     const bcolor = { borderColor: bordercolor ? bordercolor : "#E5E5E5" };
-    const height = { maxHeight: maxheight ? maxheight : 150 }
+    const height = { height: maxheight ? maxheight : 150 }
 
 
 
