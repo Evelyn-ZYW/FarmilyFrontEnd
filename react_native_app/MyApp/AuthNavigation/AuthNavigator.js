@@ -15,6 +15,21 @@ import ComfirmInfo from '../pages/ComfirmInfo';
 import PopUp from '../pages/Popup';
 import Profile from '../pages/Profile';
 
+
+
+import MessageMain from '../pages/MessageMain';
+import ShFilter from '../pages/ShFilter';
+import Main1 from '../pages/Main1';
+import Main2 from '../pages/Main2';
+import ForgetP from '../pages/ForgetP';
+import ResetP from '../pages/ResetP';
+
+// Rauqel's pagess
+import Favorite from '../pages/Favorite';
+import Notification from '../pages/Notification';
+import MpDiscussion from '../pages/MpDiscussion';
+import PostDiscussion from '../pages/PostDiscussion';
+
 const Stack = createStackNavigator();
 
 const AuthNavigator = () => {
