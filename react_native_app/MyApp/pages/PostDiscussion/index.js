@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
         
     },
     
-    
     icon: {
         resizeMode: "contain",
         maxWidth: 25,
@@ -26,7 +25,7 @@ const styles = StyleSheet.create({
     midcont:{
         marginTop:20,
         position: "absolute",
-        top: "10%",
+        top: "15%",
         alignItems: 'center',
         
         // maxHeight:"105%"
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     },
     Navi:{
         position:"absolute",
-        top:698
+       bottom:0
     },
 });
 
@@ -61,7 +60,8 @@ const PostDiscussion = () => {
                     </View>
                     <View style-={styles.continput} >
                     <ContInput
-                    placeholder="Subject"
+                    placeholder="Input content here"
+                    
                     />
                     </View>
                     

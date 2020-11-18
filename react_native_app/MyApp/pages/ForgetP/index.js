@@ -31,7 +31,16 @@ const styles = StyleSheet.create({
 });
 
 
-const ForgetP = ()=>{
+const ForgetP = ({navigation, })=>{
+    const handleLogin = () =>{
+        navigation.navigate("Login")
+    }
+
+    const handleResetP= () =>{
+        navigation.navigate("ResetP")
+    }
+    
+
     return(
         <View style={styles.forgetPpage}>
             <Image source={require('./logoV.png')} style={styles.logoV} />
@@ -40,9 +49,9 @@ const ForgetP = ()=>{
                 <UserTextInput placeholder="Username or Email Address" />
             </View>
             <View style={styles.forgetPbutton}>
-                <Button bgcolor="#00AC64" text="COMFIRM"/>
+                <Button bgcolor="#00AC64" text="COMFIRM" handler={handleResetP}/>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleLogin}>
                 <Text style={styles.forgetPback}>BACK</Text>
             </TouchableOpacity>
         </View>

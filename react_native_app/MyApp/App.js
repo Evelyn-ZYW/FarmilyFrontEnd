@@ -9,13 +9,15 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
+import MapView from 'react-native-maps';
 
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
 import MpBoard from './pages/MpBoard';
 import ShMain from './pages/ShMain';
 import ShFilter from './pages/ShFilter';
+import ShInfo from './pages/ShInfo';
 import Main1 from './pages/Main1';
 import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
@@ -27,7 +29,7 @@ import ResetP from './pages/ResetP';
 import ShBusiness from './pages/ShBusiness';
 import UserMain from './pages/UserMain';
 
-// Rauqel's pages
+// Rauqel's pagess
 import ComfirmInfo from './pages/ComfirmInfo';
 import PopUp from './pages/Popup';
 import Profile from './pages/Profile';
@@ -38,38 +40,37 @@ import PostDiscussion from './pages/PostDiscussion';
 import AuthNavigator from './AuthNavigation/AuthNavigator';
 
 
-
+// return <View style={styles.container}>
+    
+    {/* <ForumBoard /> */}
+    {/* <MessageMain />  */}
+     {/* <MpBoard />  */}
+     {/* <ShMain />  */}
+     {/* <ShFilter />  */}
+     {/* <PopUp />  */}
+     {/* <Main1 />  */}
+     {/* <Main2 />  */}
+     {/* <Profile/>  */}
+    {/*<ShBusines/>*/}
+     {/* <Favorite/>  */}
+      {/* <ComfirmInfo />  */}
+     {/* <Notification/> */}
+     {/*<OneDiscussion /> */}
+    {/* <MpDiscussion /> */}
+    {/* <PostDiscussion /> */}
+    {/* <Home /> */}
+    {/* <Login />  */}
+    {/* <SignUp />  */}
+    {/* <ForgetP /> */}  
+     {/* <ResetP /> */}
+    //  </View>
 
 const App = () => {
-
-  return <NavigationContainer>
-    <AuthNavigator />
-  </NavigationContainer>
-
-
-  //   return <View style={styles.container}>
-  //   {/* <ForumBoard /> */}
-  //   {/* <MessageMain /> */}
-  //   {/* <MpBoard /> */}
-  //   {/* <ShMain /> */}
-  //   {/* <ShFilter /> */}
-  //   {/* <PopUp /> */}
-  //   {/* <Main1 /> */}
-  //   {/* <Main2 /> */}
-  //   {/* <Profile/> */}
-  //   {/* <Favorite/> */}
-  //   {/* <ComfirmInfo /> */}
-  //   {/* <Notification/> */}
-  //   {/* <OneDiscussion /> */}
-  //   {/* <MpDiscussion /> */}
-  //   {/*<PostDiscussion />*/}
-  //   {/*<Home />*/}
-  //   {/* <Login /> */}
-  //   {/*<SignUp /> */}
-  //   {/*<ForgetP />*/}
-  //   {/* <ResetP /> */}
-  //   {/* <UserMain /> */}
-  // </View>
+  return (
+  <NavigationContainer>
+    <AuthNavigator/>
+     </NavigationContainer>
+    )
 }
 
 

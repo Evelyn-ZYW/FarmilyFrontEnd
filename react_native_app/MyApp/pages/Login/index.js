@@ -44,6 +44,10 @@ const Login = ({navigation, })=>{
         navigation.navigate("Home")
     }
 
+    const handleForgetP = () =>{
+        navigation.navigate("ForgetP")
+    }
+
 
     return(
         <View style={styles.loginpage}>
@@ -51,7 +55,7 @@ const Login = ({navigation, })=>{
             <View style={styles.loginInput}>
                     <View style={styles.loginInputBox}><UserTextInput placeholder="Username or Email Address"/></View>
                     <View style={styles.loginInputBox}><UserTextInput placeholder="Password"/></View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleForgetP}>
                     <Text style={styles.forgetP}>Forgot Password?</Text>
                 </TouchableOpacity>
             </View>
