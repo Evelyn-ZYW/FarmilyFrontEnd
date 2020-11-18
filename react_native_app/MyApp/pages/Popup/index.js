@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     },
     Navi:{
         position:"absolute",
-        top:698
+       bottom:0
     },
     // icon: {
     //     // resizeMode: "contain",
@@ -34,7 +34,10 @@ const styles = StyleSheet.create({
     // }
 });
 
-const PopUp = () => {
+const PopUp = ({navigation}) => {
+    const handleConfirm =() =>{
+        navigation.navigate("Confirm")
+    }
     return (
         <View style={styles.container}>
             <Header 

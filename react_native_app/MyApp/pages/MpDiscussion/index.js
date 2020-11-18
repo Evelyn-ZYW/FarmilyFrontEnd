@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     midcont:{
         marginTop:20,
         position: "absolute",
-        top: "10%",
+        top: "15%",
         alignItems: 'center',
         
         // maxHeight:"105%"
@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     },
     Navi:{
         position:"absolute",
-        top:698
+        bottom:0
+ 
     },
 });
 
