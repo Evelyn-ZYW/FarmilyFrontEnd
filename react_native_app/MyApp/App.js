@@ -26,7 +26,7 @@ import ForgetP from './pages/ForgetP';
 import ResetP from './pages/ResetP';
 import ShBusiness from './pages/ShBusiness';
 
-// Rauqel's pages
+// Rauqel's pagess
 import ComfirmInfo from './pages/ComfirmInfo';
 import PopUp from './pages/Popup';
 import Profile from './pages/Profile';
@@ -36,35 +36,39 @@ import MpDiscussion from './pages/MpDiscussion';
 import PostDiscussion from './pages/PostDiscussion';
 import AuthNavigator from './AuthNavigation/AuthNavigator';
 
-{/* <View style={styles.container}> */}
-    {/* <ForumBoard /> */}
-    {/* <MessageMain /> */}
-    {/* <MpBoard /> */}
-    {/* <ShMain /> */}
-    {/* <ShFilter /> */}
-    {/* <PopUp /> */}
-    {/* <Main1 /> */}
-    {/* <Main2 /> */}
-    {/* <Profile/> */}
-    {/* <Favorite/> */}
-    {/* <ComfirmInfo /> */}
-    {/* <Notification/> */}
-    {/* <OneDiscussion /> */}
-    {/* <MpDiscussion /> */}
-    {/*<PostDiscussion />*/}
-    {/*<Home />*/}
-    {/* <Login /> */}
-    {/*<SignUp /> */}
-    {/*<ForgetP />*/}
-    {/* <ResetP /> */}
-  // </View>
 
+// return <View style={styles.container}>
+    
+    {/* <ForumBoard /> */}
+    {/* <MessageMain />  */}
+     {/* <MpBoard />  */}
+     {/* <ShMain />  */}
+     {/* <ShFilter />  */}
+     {/* <PopUp />  */}
+     {/* <Main1 />  */}
+     {/* <Main2 />  */}
+     {/* <Profile/>  */}
+    {/*<ShBusines/>*/}
+     {/* <Favorite/>  */}
+      {/* <ComfirmInfo />  */}
+     {/* <Notification/> */}
+     {/*<OneDiscussion /> */}
+    {/* <MpDiscussion /> */}
+    {/* <PostDiscussion /> */}
+    {/* <Home /> */}
+    {/* <Login />  */}
+    {/* <SignUp />  */}
+    {/* <ForgetP /> */}  
+     {/* <ResetP /> */}
+    //  </View>
 
 const App = () => {
   return <NavigationContainer>
     <AuthNavigator/>
-  </NavigationContainer>
+     </NavigationContainer>
+
 }
+
 
 const styles = StyleSheet.create({
   container: {

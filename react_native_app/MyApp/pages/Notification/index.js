@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image,TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image,TouchableOpacity, TextInput,ScrollView } from 'react-native';
 
 import MyUnread from '../../comps/Unread';
 import Read from '../../comps/Read';
@@ -13,9 +13,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         // justifyContent: 'center',
     },
-    body: {
+    Cont:{
         position: "absolute",
-        top: "12%",
+        maxHeight:"85%",
+        // width:"100%",
+        top: "15%",
+       
+    },
+    body: {
+        // position: "absolute",
+        // maxHeight:"50%",
+        // bottom:,
+        // top: "15%",
         alignItems: 'center',
     },
     title: {
@@ -29,7 +38,8 @@ const styles = StyleSheet.create({
     },
     Navi:{
         position:"absolute",
-        top:698
+        bottom:0
+
     },
     
 });
@@ -42,6 +52,7 @@ const Notification = () => {
                 iconLeft={require('../../public/back.png')}
                 bottomColor="#C97064"
             />
+            <ScrollView style={styles.Cont}>
             <View style={styles.body}>
             <Text style={styles.title}>Unread</Text>
             <View style={styles.unreadmsg}>
@@ -68,17 +79,17 @@ const Notification = () => {
                  text="aaaaaahhhhhhhhhhhhhh
                  hhhhhhhhhhhhhhhhhhhhhhhhhhhh"
                 />
+                <Read
+                 title="I don't care"
+                 text="aaaaaahhhhhhhhhhhhhh
+                 hhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                />
+                
                 </View>
-
- 
- 
-               
-              
-                 
-
                 
                
             </View>
+            </ScrollView>
             <View style={styles.Navi}><Navigation /></View>
             </View>
  

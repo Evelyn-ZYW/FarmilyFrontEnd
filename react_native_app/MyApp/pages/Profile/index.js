@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
+import { View, Text, StyleSheet, Image, TextInput,TouchableOpacity } from 'react-native';
 
 
-import LogoHeader from '../../comps/LogoHeader';
-import Navigation from '../../comps/Navigation';
-import MyTab from '../../comps/Tabs';
-import Avatar from '../../comps/Avatar';
-import UserTextInput from '../../comps/Inputs';
+import LogoHeader from '../../comps/LogoHeader/index';
+import Navigation from '../../comps/Navigation/';
+import MyTab from '../../comps/Tabs/index';
+import Avatar from '../../comps/Avatar/index 2';
+// import UserTextInput from '../../comps/Inputs';
 
 
 
@@ -33,12 +33,18 @@ const styles = StyleSheet.create({
     }, 
     Navi:{
         position:"absolute",
-        top:698
+      bottom:0
     },
 
 });
 
-const Profile = () => {
+const Profile = ({navigation}) => {
+    const handleMydis = () =>{
+        navigation.navigate("OneDiscussion")
+    }
+    const handleMyMarket = () =>{
+        navigation.navigate("OneMarket")
+    }
     return (
         <View style={styles.container}>
            <LogoHeader
@@ -51,16 +57,22 @@ const Profile = () => {
             <Avatar/>
             </View>
             <View style={styles.tabs}>
+         
                 <MyTab
                 text="View Profile"
-           
                 />
+         
+                <TouchableOpacity onPress={handleMydis}>
                 <MyTab
                  text="My discussion"
                 />        
+                 </TouchableOpacity>
+
+                 <TouchableOpacity onPress={handleMyMarket}>
                 <MyTab
                 text="My Market"
                 />
+                 </TouchableOpacity>
                 <MyTab
                 text="Settings"
                 />
