@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput, ScrollView } from 'react-native';
-
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 import Header from '../../comps/Header';
 import ImageGallery from '../../comps/ImageGallery';
@@ -62,7 +62,13 @@ const styles = StyleSheet.create({
         width:300,
         alignSelf:"center",
         marginTop:30
-    }
+    },
+    map: {
+        height: 250,
+        width: 350,
+        alignSelf: "center",
+        marginTop: 40
+      }
 });
 
 const ShBusiness = ({ShTag,ShDescrip}) =>{
@@ -80,6 +86,17 @@ const ShBusiness = ({ShTag,ShDescrip}) =>{
                     <Text style={styles.ShBusinTag}>{ShTag}</Text>
                     <Text style={styles.ShB_Descrip}>{ShDescrip}</Text>
                     <View style={styles.ShB_Map}></View>
+                    <MapView
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        style={styles.map}
+                        region={{
+                            latitude: 49.2746,
+                            longitude: -123.1107,
+                            latitudeDelta: 0.055,
+                            longitudeDelta: 0.0121,
+                        }}
+                        >
+                    </MapView>    
                     <View>
                         <View style={styles.ShB_date}><InputDate /></View>
                         <View style={styles.ShB_time}><InputTime /></View>

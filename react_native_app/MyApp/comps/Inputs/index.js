@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { TextInput, StyleSheet } from "react-native";
 
 const UserTextInput = ({text, placeholder}) => {
-  const [value, onChangeText] = React.useState({text});
+  const [value, onChangeText] = React.useState(text);
 
   return (
    
