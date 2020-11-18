@@ -27,6 +27,7 @@ import SignUp from './pages/SignUp';
 import ForgetP from './pages/ForgetP';
 import ResetP from './pages/ResetP';
 import ShBusiness from './pages/ShBusiness';
+import UserMain from './pages/UserMain';
 
 // Rauqel's pagess
 import ComfirmInfo from './pages/ComfirmInfo';
@@ -65,10 +66,11 @@ import AuthNavigator from './AuthNavigation/AuthNavigator';
     //  </View>
 
 const App = () => {
-  return 
+  return (
   <NavigationContainer>
     <AuthNavigator/>
      </NavigationContainer>
+    )
 }
 
 

@@ -10,7 +10,6 @@ import TradePost from '../../comps/TradePost';
 import Underlined from '../../comps/Underlined';
 import FilterButton from '../../comps/FilterButton';
 import Button from '../../comps/Button';
-import style from '../../storybook/stories/CenterView/style';
 
 const Allpost = [
   {
@@ -66,35 +65,27 @@ const Allpost = [
     type: 'market',
   },
 ];
-
-
-const filterPost = {
-  Discussion: (post) => post.type === 'discussion',
-  Market: (post) => post.type === 'market',
-};
-
-const postType = Object.keys(filterPost);
+//2 types of button
+const FilterButtonTypes = ["Discussion", "Market"];
 
 export default function UserMain({ navigation }) {
   //no use for now
   const [isReady, setReady] = useState(false);
 
-  const [post, setPost] = useState([]); //empty array for re-render
-
-  // initial state is Discussion
-  const [filter, setFilter] = useState('Discussion');
-  const [currentSelection, setCurrentSelection] = useState('Discussion');
+  //use this later to use useeffect with actual backend
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
     setPost([...Allpost]);
   }, [setPost]);
 
-  const filterButton = postType.map((type) => {
-    return <FilterButton 
-    style={setCurrentSelection == 'discussion'?styles.underline1: styles.underline2}
-    key={type} text={type} type={type} setFilter={setFilter} setCurrentSelection={setCurrentSelection} />
-  });
+  const [currentSelection, setCurrentSelection] = useState("Discussion");
+  // const [currentUnselection, setCurrentUnselection] = useState("Market");
 
+  //filter posts based on currentSelection
+  var filtered_posts = post.filter((o) => {
+      return o.type === currentSelection.toLocaleLowerCase();
+  })
 
   const handleDiss = () => {
     navigation.navigate("Discussion");
@@ -106,59 +97,79 @@ export default function UserMain({ navigation }) {
     navigation.navigate("Sh");
   }
 
-  const postGroup = post
-    .filter((type) => filterPost[filter](type))
-    .map((post) => {
-      if (post.type === 'discussion') {
-        return (
-          <ForumPost
-            maxheight={100}
-            imagePath={post.image}
-            txt1={post.title}
-            txt2={post.description}
-            txt3={null}
-            txt4={null}
-            txt5={null}
-            icon1={null}
-            icon2={null}
-            icon3={null}
-            icon4={null}
-          />
-        );
-      } else {
-        return (
-          <TradePost
-            maxheight={100}
-            imagePath={post.image}
-            txt1={post.title}
-            txt2={null}
-            txt3={post.description}
-            txt4={null}
-            txt5={null}
-            icon1={null}
-            icon2={null}
-            icon3={null}
-            icon4={null}
-          />
-        );
-      }
-    });
+  const handleHome = () => {
+    navigation.navigate("Home");
+  }
+
+
 
   return (
     <View style={styles.container}>
-      <LogoHeader logo={require("../../public/logo_h.png")} />
+      <LogoHeader logo={require("../../public/logo_h.png")} handler={handleHome} />
       <View style={styles.body}>
-        <View style={styles.filterGroup}>{filterButton}</View>
-        <ScrollView style={filter == "Discussion" ? styles.allPostBody : styles.allPostBody2}>{postGroup}</ScrollView>
-        {filter == "Discussion" ? <Button text="MORE" bgcolor="#FDB833" width="70%" handler={handleDiss} /> : <Button text="MORE" bgcolor="#00AC64" width="70%" handler={handleMark} />}
+        <View style={styles.filterGroup}>
+          {
+            //make the buttons with the Filter Button Types array
+            FilterButtonTypes.map((o, i) => {
+              //use underline styles with currentSelection, o will either be Discussion or Market
+              return <View style={[o === currentSelection ? styles.underline1: styles.underline2]}>
+
+                <FilterButton key={i} text={o} onPress={(text) => {
+                  //change the current selection text
+
+                  console.log(currentSelection);
+                  setCurrentSelection(text);
+
+                }} />
+              </View>
+            })
+          }
+        </View>
+        <ScrollView style={currentSelection == "Discussion" ? styles.allPostBody : styles.allPostBody2}>
+          {
+            filtered_posts.map((o, i) => {
+              if (currentSelection === "Discussion") {
+                return <ForumPost
+                  key={i}
+                  maxheight={100}
+                  imagePath={o.image}
+                  txt1={o.title}
+                  txt2={o.description}
+                  txt3={null}
+                  txt4={null}
+                  txt5={null}
+                  icon1={null}
+                  icon2={null}
+                  icon3={null}
+                  icon4={null}
+                />
+              }
+              if (currentSelection === "Market") {
+                return <TradePost
+                  key={i}
+                  maxheight={100}
+                  imagePath={o.image}
+                  txt1={o.title}
+                  txt2={null}
+                  txt3={o.description}
+                  txt4={null}
+                  txt5={null}
+                  icon1={null}
+                  icon2={null}
+                  icon3={null}
+                  icon4={null}
+                />
+              }
+            })
+          }
+        </ScrollView>
+        {currentSelection == "Discussion" ? <Button text="MORE" bgcolor="#FDB833" width="70%" handler={handleDiss} /> : <Button text="MORE" bgcolor="#00AC64" width="70%" handler={handleMark} />}
         <View style={{ minWidth: '100%', alignItems: 'center', flexDirection: 'row' }}>
-          <TouchableOpacity onPress={handleSh} >
+          <TouchableOpacity onPress={handleSh}>
             <Underlined
               text="Slaughterhouses"
             />
           </TouchableOpacity>
-
-
           <Image
             style={styles.icon}
             source={require("../../public/forward.png")}
@@ -166,7 +177,7 @@ export default function UserMain({ navigation }) {
         </View>
       </View>
       <View style={styles.Navi}><Navigation /></View>
-    </View>
+    </View >
   );
 }
 
@@ -190,7 +201,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: '20%',
     alignItems: 'center',
-
     // borderWidth: 1,
   },
   filterGroup: {
@@ -223,7 +233,7 @@ const styles = StyleSheet.create({
   },
   Navi: {
     position: "absolute",
-    bottom: 0 
+    bottom: 0
   },
   useMainB: {
     width: 212
@@ -236,6 +246,10 @@ const styles = StyleSheet.create({
     borderBottomColor: "#00AC64",
     borderBottomWidth: 3,
   },
+  // underline2: {
+  //   borderBottomColor: null,
+  //   borderBottomWidth: 0,
+  // },
   underline3: {
     borderBottomColor: "blue",
     borderBottomWidth: 3,
