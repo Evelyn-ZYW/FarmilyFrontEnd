@@ -80,12 +80,13 @@ export default function UserMain({ navigation }) {
   }, [setPost]);
 
   const [currentSelection, setCurrentSelection] = useState("Discussion");
-  // const [currentUnselection, setCurrentUnselection] = useState("Market");
 
   //filter posts based on currentSelection
   var filtered_posts = post.filter((o) => {
       return o.type === currentSelection.toLocaleLowerCase();
   })
+//set the state of Slaughterhouses button
+  const [shClick, setShClick] = useState(false);
 
   const handleDiss = () => {
     navigation.navigate("Discussion");
@@ -95,13 +96,23 @@ export default function UserMain({ navigation }) {
   }
   const handleSh = () => {
     navigation.navigate("Sh");
+    setShClick(true);
   }
 
   const handleHome = () => {
     navigation.navigate("Home");
   }
 
+  console.log(currentSelection); //console log has to be before the whole thing being returned
 
+  //when the currentSelection matches the button give it an underline
+  //give a yellow underline if currentSelection is Discussion, green if it is Market
+  var underline = null; // can also be: var underline;
+  if (currentSelection === "Discussion") {
+    underline = styles.underline1;
+  } else if (currentSelection === "Market"){
+    underline = styles.underline2;
+  }
 
   return (
     <View style={styles.container}>
@@ -112,12 +123,10 @@ export default function UserMain({ navigation }) {
             //make the buttons with the Filter Button Types array
             FilterButtonTypes.map((o, i) => {
               //use underline styles with currentSelection, o will either be Discussion or Market
-              return <View style={[o === currentSelection ? styles.underline1: styles.underline2]}>
+              return <View style={[o === currentSelection ? underline:{}]}>
 
                 <FilterButton key={i} text={o} onPress={(text) => {
                   //change the current selection text
-
-                  console.log(currentSelection);
                   setCurrentSelection(text);
 
                 }} />
@@ -166,9 +175,7 @@ export default function UserMain({ navigation }) {
         {currentSelection == "Discussion" ? <Button text="MORE" bgcolor="#FDB833" width="70%" handler={handleDiss} /> : <Button text="MORE" bgcolor="#00AC64" width="70%" handler={handleMark} />}
         <View style={{ minWidth: '100%', alignItems: 'center', flexDirection: 'row' }}>
           <TouchableOpacity onPress={handleSh}>
-            <Underlined
-              text="Slaughterhouses"
-            />
+            {shClick === true ? <Underlined text="Slaughterhouses" bottom="#2775C9" bottomWidth={3} /> : <Underlined text="Slaughterhouses" />}
           </TouchableOpacity>
           <Image
             style={styles.icon}
@@ -246,12 +253,8 @@ const styles = StyleSheet.create({
     borderBottomColor: "#00AC64",
     borderBottomWidth: 3,
   },
-  // underline2: {
-  //   borderBottomColor: null,
-  //   borderBottomWidth: 0,
-  // },
   underline3: {
-    borderBottomColor: "blue",
+    borderBottomColor: "#2775C9",
     borderBottomWidth: 3,
   }
 });
