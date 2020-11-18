@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 
 import TradePost from '../../comps/TradePost';
 import Header from '../../comps/Header';
@@ -28,13 +30,17 @@ const styles = StyleSheet.create({
         maxHeight: 25,
         margin: 10
     },
-    Navi:{
-        position:"absolute",
-        top:698
+    Navi: {
+        position: "absolute",
+        top: 698
     },
 });
 
-const MpBoard = () => {
+const MpBoard = ({ navigation }) => {
+
+    const handleMpost = () => {
+        navigation.navigate("OneMarket")
+    }
     return (
         <View style={styles.container}>
             <Header
@@ -55,19 +61,26 @@ const MpBoard = () => {
                     ></Image>
                 </View>
                 {/* this input is for testing pages only -- end */}
-                <TradePost />
-                <TradePost
-                    imagePath={require('../../public/tractor1.png')}
-                    txt1="item 2 for sale"
-                    txt2="$300"
-                    txt3="its me again"
-                />
-                <TradePost
-                    imagePath={require('../../public/tractor2.png')}
-                    txt1="item 3 for sale"
-                    txt2="$700"
-                    txt3="OMG"
-                />
+                <TouchableOpacity onPress={handleMpost}>
+                    <TradePost />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleMpost}>
+                    <TradePost
+                        imagePath={require('../../public/tractor1.png')}
+                        txt1="item 2 for sale"
+                        txt2="$300"
+                        txt3="its me again"
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleMpost}>
+                    <TradePost
+                        imagePath={require('../../public/tractor2.png')}
+                        txt1="item 3 for sale"
+                        txt2="$700"
+                        txt3="OMG"
+                    />
+                </TouchableOpacity>
+
 
             </View>
             <View style={styles.Navi}><Navigation /></View>

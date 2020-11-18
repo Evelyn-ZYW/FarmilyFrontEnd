@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 import ForumPost from '../../comps/ForumPost';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
@@ -27,13 +29,16 @@ const styles = StyleSheet.create({
         maxHeight: 25,
         margin: 10
     },
-    Forum_Navi:{
-        position:"absolute",
-        top:698
+    Forum_Navi: {
+        position: "absolute",
+        top: 698
     },
 });
 
-const ForumBoard = () => {
+const ForumBoard = ({ navigation }) => {
+    const handleDpost = () => {
+        navigation.navigate("OneDiscussion")
+    }
     return (
         <View style={styles.container}>
             <Header
@@ -54,17 +59,25 @@ const ForumBoard = () => {
                     ></Image>
                 </View>
                 {/* this input is for testing pages only -- end */}
-                <ForumPost />
-                <ForumPost
-                    imagePath={require('../../public/sh2.png')}
-                    txt1="OMG"
-                    txt2="WOW"
-                />
-                <ForumPost
-                    imagePath={require('../../public/sh3.png')}
-                    txt1="Ok Alright"
-                    txt2="dont stop the dancing"
-                />
+                <TouchableOpacity onPress={handleDpost}>
+                    <ForumPost />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleDpost}>
+                    <ForumPost
+                        imagePath={require('../../public/sh2.png')}
+                        txt1="OMG"
+                        txt2="WOW"
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleDpost}>
+                    <ForumPost
+                        imagePath={require('../../public/sh3.png')}
+                        txt1="Ok Alright"
+                        txt2="dont stop the dancing"
+                    />
+                </TouchableOpacity>
+
+
                 {/* <ForumPost
                     imagePath={require('../../public/sh4.png')}
                     txt1="One more time"

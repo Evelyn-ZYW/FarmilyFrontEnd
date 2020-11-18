@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TextInput } from 'react-native';
 
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+
 
 import ShListing from '../../comps/ShListing';
 import Header from '../../comps/Header';
@@ -28,13 +30,17 @@ const styles = StyleSheet.create({
         maxHeight: 25,
         margin: 10
     },
-    Navi:{
-        position:"absolute",
-        top:698
+    Navi: {
+        position: "absolute",
+        top: 698
     },
 });
 
-const ShMain = () => {
+const ShMain = ({ navigation }) => {
+
+    const handleShB = () => {
+        navigation.navigate("ShB");
+    }
     return (
         <View style={styles.container}>
             <Header
@@ -55,14 +61,27 @@ const ShMain = () => {
                     ></Image>
                 </View>
                 {/* this input is for testing pages only -- end */}
-                <ShListing />
-                <ShListing
-                    imagePath={require('../../public/sh3.png')}
-                    txt1="Nanaimo Slaughterhouse"
-                    txt2="We are the biggest slaughterhouse in Nanaimo..."
-                    txt3="4.8"
-                    txt4="(259)"
-                />
+                    <TouchableOpacity onPress={handleShB}>
+                        <ShListing />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={handleShB}>
+                        <ShListing
+                            imagePath={require('../../public/sh3.png')}
+                            txt1="Nanaimo Slaughterhouse"
+                            txt2="We are the biggest slaughterhouse in Nanaimo..."
+                            txt3="4.8"
+                            txt4="(259)"
+                        />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={handleShB}>
+                        <ShListing
+                            imagePath={require('../../public/sh3.png')}
+                            txt1="Nanaimo Slaughterhouse"
+                            txt2="We are the biggest slaughterhouse in Nanaimo..."
+                            txt3="4.8"
+                            txt4="(259)"
+                        />
+                    </TouchableOpacity>
             </View>
             <View style={styles.Navi}><Navigation /></View>
         </View>
