@@ -36,7 +36,7 @@ const ForgetP = ({navigation, })=>{
         navigation.navigate("Login")
     }
 
-    const handleResetP = () =>{
+    const handleResetP= () =>{
         navigation.navigate("ResetP")
     }
     
