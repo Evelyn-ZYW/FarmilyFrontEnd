@@ -9,13 +9,15 @@
 import React from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from "react-router-native";
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
+import MapView from 'react-native-maps';
 
 import ForumBoard from './pages/ForumBoard';
 import MessageMain from './pages/MessageMain';
 import MpBoard from './pages/MpBoard';
 import ShMain from './pages/ShMain';
 import ShFilter from './pages/ShFilter';
+import ShInfo from './pages/ShInfo';
 import Main1 from './pages/Main1';
 import Main2 from './pages/Main2';
 import OneDiscussion from './pages/OneDiscussion';
@@ -63,11 +65,12 @@ import AuthNavigator from './AuthNavigation/AuthNavigator';
     //  </View>
 
 const App = () => {
-  return <NavigationContainer>
+  return 
+  <NavigationContainer>
     <AuthNavigator/>
      </NavigationContainer>
-
 }
+
 
 
 const styles = StyleSheet.create({
