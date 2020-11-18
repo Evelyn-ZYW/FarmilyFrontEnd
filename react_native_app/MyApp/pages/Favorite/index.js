@@ -13,29 +13,32 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
     },
     body: {
-        position: "absolute",
-        top: "10%",
+        // position: "absolute",
+        // top: "1%",
         alignItems: 'center',
         
             //  maxHeight:"100%"
     },
     Navi:{
         position:"absolute",
-        top:698
+        bottom:0
+  
     },
-//     contentContainer: {
-//         // alignItems: 'center',
-//         position: "absolute",
-//         top: "14%",
-//         // alignItems: 'center',
-//         // borderWidth:3,
-//         // maxHeight:"100%"
+    contentContainer: {
+        // alignItems: 'center',
+        position: "absolute",
+        top: "13%",
+        // maxHeight:"50%",
+        // alignItems: 'center',
+        // borderWidth:3,
+        maxHeight:"90%"
     
-// },
+},
 
 });
 
-const Favorite = () => {
+const Favorite = ({navigation}) => {
+    // const handle
     return (
         
         <View style={styles.container}>
@@ -44,9 +47,9 @@ const Favorite = () => {
                 text="Favorite"
 
                 // iconRight={require('../../public/pencil.png')}
-                bottomColor="#2775C9"
+                bottomColor="#C97064"
             />
-  
+            <ScrollView style={styles.contentContainer}>
             <View style={styles.body}>
             
                 <MyTab2 
@@ -60,7 +63,7 @@ const Favorite = () => {
                 />
     
             </View>
-       
+            </ScrollView>
             <View style={styles.Navi}><Navigation /></View>
         </View>
 

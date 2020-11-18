@@ -10,6 +10,7 @@ import TradePost from '../../comps/TradePost';
 import Underlined from '../../comps/Underlined';
 import FilterButton from '../../comps/FilterButton';
 import Button from '../../comps/Button';
+import style from '../../storybook/stories/CenterView/style';
 
 const Allpost = [
   {
@@ -84,14 +85,16 @@ export default function UserMain({ navigation }) {
   const [filter, setFilter] = useState('Discussion');
   const [currentSelection, setCurrentSelection] = useState('Discussion');
 
-
   useEffect(() => {
     setPost([...Allpost]);
   }, [setPost]);
 
   const filterButton = postType.map((type) => {
-    return <FilterButton key={type} text={type} type={type} setFilter={setFilter} setCurrentSelection={setCurrentSelection} />
+    return <FilterButton 
+    style={setCurrentSelection == 'discussion'?styles.underline1: styles.underline2}
+    key={type} text={type} type={type} setFilter={setFilter} setCurrentSelection={setCurrentSelection} />
   });
+
 
   const handleDiss = () => {
     navigation.navigate("Discussion");
@@ -149,7 +152,7 @@ export default function UserMain({ navigation }) {
         <ScrollView style={filter == "Discussion" ? styles.allPostBody : styles.allPostBody2}>{postGroup}</ScrollView>
         {filter == "Discussion" ? <Button text="MORE" bgcolor="#FDB833" width="70%" handler={handleDiss} /> : <Button text="MORE" bgcolor="#00AC64" width="70%" handler={handleMark} />}
         <View style={{ minWidth: '100%', alignItems: 'center', flexDirection: 'row' }}>
-          <TouchableOpacity onPress={handleSh}>
+          <TouchableOpacity onPress={handleSh} >
             <Underlined
               text="Slaughterhouses"
             />
@@ -201,7 +204,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     width: '90%',
     borderRadius: 10,
-    maxHeight: '40%',
+    height: 400,
   },
 
   allPostBody2: {
@@ -210,7 +213,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     width: '90%',
     borderRadius: 10,
-    maxHeight: '40%',
+    height: 400,
   },
   icon: {
     resizeMode: 'contain',
@@ -220,17 +223,21 @@ const styles = StyleSheet.create({
   },
   Navi: {
     position: "absolute",
-    top: 698
+    bottom: 0 
   },
   useMainB: {
     width: 212
   },
   underline1: {
-    borderBottomColor: "yellow",
+    borderBottomColor: "#FDB833",
     borderBottomWidth: 3,
   },
   underline2: {
-    borderBottomColor: "green",
+    borderBottomColor: "#00AC64",
+    borderBottomWidth: 3,
+  },
+  underline3: {
+    borderBottomColor: "blue",
     borderBottomWidth: 3,
   }
 });

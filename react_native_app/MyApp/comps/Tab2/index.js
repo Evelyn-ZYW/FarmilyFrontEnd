@@ -32,7 +32,6 @@ const MyTab2 = ({iconExpand, text,dropdown}) => {
         <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
        <PostBodyD />
         </View>
-
         </View>
         {/* <View isdrop={isdrop} style={[styles.hourContainer, hourCont]}>
        <PostBodyD />

@@ -65,7 +65,10 @@ const styles = StyleSheet.create({
     }
 });
 
-const ShBusiness = ({ShTag,ShDescrip}) =>{
+const ShBusiness = ({ShTag,ShDescrip,navigation}) =>{
+    const handleBooking =() =>{
+        navigation.navigate("ConfirmInfo")
+    }
     return(
         <View style={styles.ShBusinessPage}>
             <View style={styles.ShBusinessHead}>
@@ -84,7 +87,7 @@ const ShBusiness = ({ShTag,ShDescrip}) =>{
                         <View style={styles.ShB_date}><InputDate /></View>
                         <View style={styles.ShB_time}><InputTime /></View>
                     </View>
-                    <View style={styles.ShBButton}><Button text="BOOKING" bgcolor="#2775C9"  /></View>
+                    <View style={styles.ShBButton}><Button text="BOOKING" bgcolor="#2775C9" handler={handleBooking} /></View>
                 </ScrollView>
 
 

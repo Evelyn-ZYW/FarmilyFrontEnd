@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
     Navi:{
         position:"absolute",
-        top:698
+        bottom:0
     },
     // icon: {
     //     // resizeMode: "contain",
@@ -38,7 +38,10 @@ const styles = StyleSheet.create({
     // }
 });
 
-const ComfirmInfo = () => {
+const ComfirmInfo = ({navigation}) => {
+    const handlePopUp =() =>{
+        navigation.navigate("PopUp")
+    }
     return (
         <View style={styles.container}>
             <Header 
@@ -53,8 +56,10 @@ const ComfirmInfo = () => {
                 
                 <MyComfirm>
                 </MyComfirm>
-                <View style={styles.button}>
-                <Button/>
+                <View style={styles.button} >
+                <Button
+                handler={handlePopUp}
+                />
                 </View>
                 {/* </View> */}
                 {/* this input is for testing pages only -- end */}
@@ -73,8 +78,8 @@ const ComfirmInfo = () => {
 };
 Button.defaultProps= {
     bgcolor: "#2775C9",
-  text: "Comfirm"
-  
+  text: "Confirm",
+  width:200
 }
 Header.defaultProps = {
     // text: "Default text",
