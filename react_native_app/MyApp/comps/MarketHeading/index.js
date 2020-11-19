@@ -5,7 +5,7 @@ import style from '../../storybook/stories/CenterView/style';
 const styles = StyleSheet.create({
     container: {
         borderBottomWidth: 1,
-        width: 375,
+        width: "100%",
         padding: 15,
     },
     avatar: {

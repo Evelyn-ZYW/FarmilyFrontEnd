@@ -7,6 +7,7 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import ShListing from '../../comps/ShListing';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
+import UserTextInput from '../../comps/Inputs';
 
 const styles = StyleSheet.create({
     container: {
@@ -34,6 +35,16 @@ const styles = StyleSheet.create({
         position: "absolute",
         bottom: 0
     },
+    userinput: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        marginBottom: 10,
+        borderBottomColor: "#E5E5E5",
+        borderBottomWidth: 1.5,
+        minWidth: "100%",
+        minHeight: "8.5%",
+    },
 });
 
 const ShMain = ({ navigation }) => {
@@ -51,7 +62,7 @@ const ShMain = ({ navigation }) => {
             />
             <View style={styles.body}>
                 {/* this input is for testing pages only -- start */}
-                <View style={styles.row}>
+                {/* <View style={styles.row}>
                     <TextInput
                         style={{ height: 40, width: "60%", borderColor: 'gray', borderWidth: 1, marginBottom: "6%", borderRadius: 5, textAlign: "center" }}
                     >For testing, will fix later</TextInput>
@@ -59,29 +70,38 @@ const ShMain = ({ navigation }) => {
                         source={require('../../public/search.png')}
                         style={styles.icon}
                     ></Image>
-                </View>
+                </View> */}
                 {/* this input is for testing pages only -- end */}
-                    <TouchableOpacity onPress={handleShB}>
-                        <ShListing />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={handleShB}>
-                        <ShListing
-                            imagePath={require('../../public/sh3.png')}
-                            txt1="Nanaimo Slaughterhouse"
-                            txt2="We are the biggest slaughterhouse in Nanaimo..."
-                            txt3="4.8"
-                            txt4="(259)"
-                        />
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={handleShB}>
-                        <ShListing
-                            imagePath={require('../../public/sh3.png')}
-                            txt1="Nanaimo Slaughterhouse"
-                            txt2="We are the biggest slaughterhouse in Nanaimo..."
-                            txt3="4.8"
-                            txt4="(259)"
-                        />
-                    </TouchableOpacity>
+                <View style={styles.userinput}>
+                    <UserTextInput
+                        placeholder="Search"
+                    />
+                    <Image
+                        source={require('../../public/search.png')}
+                        style={styles.icon}
+                    />
+                </View>
+                <TouchableOpacity onPress={handleShB}>
+                    <ShListing />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleShB}>
+                    <ShListing
+                        imagePath={require('../../public/sh3.png')}
+                        txt1="Nanaimo Slaughterhouse"
+                        txt2="We are the biggest slaughterhouse in Nanaimo..."
+                        txt3="4.8"
+                        txt4="(259)"
+                    />
+                </TouchableOpacity>
+                <TouchableOpacity onPress={handleShB}>
+                    <ShListing
+                        imagePath={require('../../public/sh3.png')}
+                        txt1="Nanaimo Slaughterhouse"
+                        txt2="We are the biggest slaughterhouse in Nanaimo..."
+                        txt3="4.8"
+                        txt4="(259)"
+                    />
+                </TouchableOpacity>
             </View>
             <View style={styles.Navi}><Navigation /></View>
         </View>

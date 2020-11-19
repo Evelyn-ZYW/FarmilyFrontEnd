@@ -5,6 +5,7 @@ import MsgBox from '../../comps/MsgBox';
 import Header from '../../comps/Header';
 import Navigation from '../../comps/Navigation';
 import style from '../../storybook/stories/CenterView/style';
+import UserTextInput from '../../comps/Inputs';
 
 const styles = StyleSheet.create({
     container: {
@@ -28,9 +29,19 @@ const styles = StyleSheet.create({
         maxHeight: 25,
         margin: 10
     },
-    MsgNavi:{
-        position:"absolute",
-        top:698
+    MsgNavi: {
+        position: "absolute",
+        bottom: 0
+    },
+    userinput: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        marginBottom: 10,
+        borderBottomColor: "#E5E5E5",
+        borderBottomWidth: 1.5,
+        minWidth: "100%",
+        minHeight: "15%",
     },
 });
 
@@ -46,7 +57,7 @@ const MessageMain = () => {
 
             <View style={styles.body}>
                 {/* this input is for testing pages only -- start */}
-                <View style={styles.row}>
+                {/* <View style={styles.row}>
                     <TextInput
                         style={{ height: 40, width: "60%", borderColor: 'gray', borderWidth: 1, marginBottom: "6%", borderRadius: 5, textAlign: "center" }}
                     >For testing, will fix later</TextInput>
@@ -54,9 +65,17 @@ const MessageMain = () => {
                         source={require('../../public/search.png')}
                         style={styles.icon}
                     ></Image>
-                </View>
+                </View> */}
                 {/* this input is for testing pages only -- end */}
-
+                <View style={styles.userinput}>
+                    <UserTextInput
+                        placeholder="Search"
+                    />
+                    <Image
+                        source={require('../../public/search.png')}
+                        style={styles.icon}
+                    />
+                </View>
                 <MsgBox />
                 <MsgBox
                     imagePath={require('../../public/a2.png')}
