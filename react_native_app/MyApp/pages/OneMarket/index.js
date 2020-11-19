@@ -15,10 +15,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     contentContainer: {
-        // flex:1,
+        flexGrow:1,
         position: "absolute",
         top: "14%",
         // alignItems: 'center',
+        // justifyContent: "center",
         // borderWidth:3,
         maxHeight: "100%"
     },
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     },
     Navi: {
         position: "absolute",
-        top: 698
+        bottom: 0
     },
 });
 
@@ -48,14 +49,14 @@ const OneMarket = () => {
                 iconLeft={require('../../public/back.png')}
                 bottomColor="#00AC64"
             />
-            <ScrollView style={styles.contentContainer}>
+            <ScrollView style={[styles.contentContainer,styles.cont,flexGrow="1",alignItems= "center"]}>
                 <View>
                     <MarketHeading />
                     <PostBodyM />
                 </View>
                 <Button
-                text="Contact the Seller" 
-                bgcolor="#00AC64"
+                    text="Contact the Seller"
+                    bgcolor="#00AC64"
                 />
             </ScrollView>
             <View style={styles.Navi}><Navigation /></View>

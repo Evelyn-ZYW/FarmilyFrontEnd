@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     ShB_Navi:{
         position:"absolute",
-        top:698
+        bottom:0
     },
     ShBusinessHead:{
 

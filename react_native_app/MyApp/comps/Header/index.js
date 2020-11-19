@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Image } from "react-native";
 const styles = StyleSheet.create({
     headerBox:{
         position: "absolute",
-        top: 0,
+        top: "3%",
         borderBottomColor:"#E5E5E5",
         borderBottomWidth:1.5,
         minWidth: "100%",

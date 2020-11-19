@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     },
     Navi: {
         position: "absolute",
-        top: 698
+        bottom: 0
     },
 });
 
