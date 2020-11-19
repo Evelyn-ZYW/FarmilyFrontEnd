@@ -33,24 +33,24 @@ import PostDiscussion from '../pages/PostDiscussion';
 const Stack = createStackNavigator();
 
 const AuthNavigator = () => {
-	return (
-		<Stack.Navigator screenOptions={{ headerShown: false }}>
-			 <Stack.Screen name="Home" component={Home} />
+    return (
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Signup" component={SignUp} />
             <Stack.Screen name="Main" component={UserMain} />
             <Stack.Screen name="Market" component={MpBoard} />
-            <Stack.Screen name="OneMarket" component={OneMarket} /> 
+            <Stack.Screen name="OneMarket" component={OneMarket} />
             <Stack.Screen name="Discussion" component={ForumBoard} />
-             <Stack.Screen name="OneDiscussion" component={OneDiscussion} /> 
-             <Stack.Screen name="Sh" component={ShMain} /> 
+            <Stack.Screen name="OneDiscussion" component={OneDiscussion} />
+            <Stack.Screen name="Sh" component={ShMain} />
             <Stack.Screen name="ShB" component={ShBusiness} />
              <Stack.Screen name="ConfirmInfo" component={ComfirmInfo} /> 
             <Stack.Screen name="PopUp" component={PopUp} /> 
              <Stack.Screen name="Profile" component={Profile} /> 
 
-		</Stack.Navigator>
-	);
+        </Stack.Navigator>
+    );
 };
 
 export default AuthNavigator;

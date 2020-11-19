@@ -1,3 +1,7 @@
 rootProject.name = 'MyApp'
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+<<<<<<< HEAD
 include ':app'
+=======
+include ':app'
+>>>>>>> bd83e09f87b414d78d65f3971ea4069fc3691005

@@ -16,34 +16,15 @@ import AuthNavigator from './AuthNavigation/AuthNavigator';
 
 // return <View style={styles.container}>
     
-    {/* <ForumBoard /> */}
-    {/* <MessageMain />  */}
-     {/* <MpBoard />  */}
-     {/* <ShMain />  */}
-     {/* <ShFilter />  */}
-     {/* <PopUp />  */}
-     {/* <Main1 />  */}
-     {/* <Main2 />  */}
-     {/* <Profile/>  */}
-    {/*<ShBusines/>*/}
-     {/* <Favorite/>  */}
-      {/* <ComfirmInfo />  */}
-     {/* <Notification/> */}
-     {/*<OneDiscussion /> */}
-    {/* <MpDiscussion /> */}
-    {/* <PostDiscussion /> */}
     {/* <Home /> */}
-    {/* <Login />  */}
-    {/* <SignUp />  */}
-    {/* <ForgetP /> */}  
-     {/* <ResetP /> */}
+
     //  </View>
 
 const App = () => {
-  return <NavigationContainer>
+  return (<NavigationContainer>
     <AuthNavigator/>
      </NavigationContainer>
-
+  )
 }
 
 

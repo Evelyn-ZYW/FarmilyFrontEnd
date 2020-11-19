@@ -69,13 +69,24 @@ const styles = StyleSheet.create({
     }
 })
 
-const FilterButton = ({ type, text, setFilter, setCurrentSelection }) => {
+// const FilterButton = ({ type, text, setFilter, setCurrentSelection }) => {
+//     return (
+//         <TouchableOpacity
+//         onPress={() => { setFilter(type); setCurrentSelection(type); }}>
+//             <View>
+//                 <Text style={styles.underText}>{text}</Text>
+//             </View>
+//         </TouchableOpacity>
+//     )
+// };
 
-
+const FilterButton = ({ text, onPress }) => {
     return (
-        <TouchableOpacity
-        onPress={() => { setFilter(type); setCurrentSelection(type); }}>
-            <View>
+        <TouchableOpacity onPress={() => {
+            //pass the text back out to the page onPress
+            onPress(text)
+        }}>
+            <View >
                 <Text style={styles.underText}>{text}</Text>
             </View>
         </TouchableOpacity>
@@ -83,6 +94,6 @@ const FilterButton = ({ type, text, setFilter, setCurrentSelection }) => {
 };
 
 FilterButton.defaultProps = {
-
+    onPress: () => { }
 }
 export default FilterButton;

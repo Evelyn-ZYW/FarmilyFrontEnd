@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity} from "react-native";
 
 
 
-const InputLocation = ({loc1, loc2, loc3, loc4, loc5, loc6, loc7, loc8, dropdown}) => {
+const InputLocation = ({loc1, loc2, loc3, loc4, loc5, loc6, dropdown}) => {
 
   
   const [isdrop, setDrop] = useState(false);
@@ -56,12 +56,6 @@ const InputLocation = ({loc1, loc2, loc3, loc4, loc5, loc6, loc7, loc8, dropdown
         </View>
         <View style={styles.locBlock}>
           <Text style={styles.loc}>{loc6}</Text>
-        </View>
-        <View style={styles.locBlock}>
-          <Text style={styles.loc}>{loc7}</Text>
-        </View>
-        <View style={styles.locBlock}>
-          <Text style={styles.loc}>{loc8}</Text>
         </View>
       </View>
 
@@ -146,14 +140,12 @@ locContainer:{
 });
 
 InputLocation.defaultProps = {
-  loc1:null,
-  loc2:null,
-  loc3:null,
-  loc4:null,
-  loc5:null,
-  loc6:null,
-  loc7:null,
-  loc8:null,
+  loc1:"Northern BC",
+  loc2:"Cariboo, Chilcotin, Coast",
+  loc3:"Thompson Okanagan",
+  loc4:"Vancouver Island",
+  loc5:"Vancouver Coast & Mountains",
+  loc6:"Kootenay Rockies",
   dropdown:()=>{}
 }
 
