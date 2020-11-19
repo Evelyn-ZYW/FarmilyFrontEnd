@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         // justifyContent: "center"
     },
-    continput:{
-        width: 200,
-        height: 200
-    },
+    // continput:{
+    //     width: 200,
+    //     height: 200
+    // },
     userinput:{
         display: "flex",
         flexDirection: "row",
@@ -50,16 +50,10 @@ const styles = StyleSheet.create({
         position:"absolute",
         bottom:0
     },
-    mapContainer: {
-        ...StyleSheet.absoluteFillObject,
-        height: 400,
-        width: 400,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-      },
-      map: {
-        ...StyleSheet.absoluteFillObject,
-      },
+    map: {
+        height: 350,
+        width: 350
+      }
 });
 
 const ShInfo = ({navigation}) => {
@@ -86,7 +80,7 @@ const ShInfo = ({navigation}) => {
                 <View style={styles.midcont}>                
                    <View style={styles.userinput}>
                         <UserTextInput
-                        placeholder="Search"
+                        text="Search"
                         />
                         <Image
                             source={require('../../public/search.png')}
@@ -94,21 +88,17 @@ const ShInfo = ({navigation}) => {
                         />
                     </View>
 
-                    <MapCont style-={styles.continput} >
-                        <View style={styles.mapContainer}>
-                            <MapView
-                            provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-                            style={styles.map}
-                            region={{
-                                latitude: 37.78825,
-                                longitude: -122.4324,
-                                latitudeDelta: 0.015,
-                                longitudeDelta: 0.0121,
-                            }}
-                            >
-                            </MapView>
-                        </View>
-                    </MapCont>                   
+                    <MapView
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        style={styles.map}
+                        region={{
+                            latitude: 49.2746,
+                            longitude: -123.1107,
+                            latitudeDelta: 0.055,
+                            longitudeDelta: 0.0121,
+                        }}
+                        >
+                        </MapView>       
                 </View>
                 <View style-={styles.businessInfoComp}>
                     <ShBusinessComp />
@@ -120,5 +110,6 @@ const ShInfo = ({navigation}) => {
         </View>
     );
 };
+
 
 export default ShInfo;
